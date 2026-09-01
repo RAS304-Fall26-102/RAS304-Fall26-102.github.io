@@ -1,6 +1,6 @@
 site_name: RAS304 Team Report Template
-site_url: https://ras-embedded-systems.github.io/RAS304TeamTemplate
-repo_url: https://github.com/ras-embedded-systems/RAS304TeamTemplate
+site_url: https://RAS304-Fall26-102.github.io/RAS304TeamTemplate
+repo_url: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.ioi
 edit_uri: edit/main/docs/
 theme:
   name: material
