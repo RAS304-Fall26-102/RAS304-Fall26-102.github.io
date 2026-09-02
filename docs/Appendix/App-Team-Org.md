@@ -100,4 +100,4 @@ All conflicts will be handled internally in a fair and appropriate manner. It is
 
 Your full name printed here acts as a binding signature for each member to follow the contract/organization set up.
 
-Kaushik Gunasekaren
+<font size="5">Kaushik Gunasekaren<br>
