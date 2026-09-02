@@ -29,5 +29,5 @@ Professor Thangavelu<br>
 | ---------------------- | -----------------------|
 | Kaushik Gunasekaren    | [Kaushik's GitHub](https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/) |
 | Preston Potts          | [Preston's GitHub](https://r0gue12.github.io/papotts_RAS304_Fall26/) |
-| Akshan Bhelkar         | [Akshan's GitHub](https://github.io/papotts_RAS304_Fall26/) |
+| Akshan Bhelkar         | [Akshan's GitHub](https://akshan2.github.io/abhelkar_RAS304_F26/) |
 | Bex Baker              | [Bex's GitHub](https://github.io/papotts_RAS304_Fall26/) |
