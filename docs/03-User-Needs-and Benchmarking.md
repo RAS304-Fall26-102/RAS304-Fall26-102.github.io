@@ -2,8 +2,6 @@
 title: User Needs and Benchmarking
 ---
 
-## Voice of the Customer
-
 ### Search #1
 
 **Keywords:** "robotic spider"
