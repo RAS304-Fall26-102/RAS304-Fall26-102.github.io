@@ -103,3 +103,4 @@ Your full name printed here acts as a binding signature for each member to follo
 <font size="5">Kaushik Gunasekaren<br>
 <font size="5">Akshan Bhelkar<br>
 <font size="5">Preston Potts<br>
+<font size="5">Rebecca Baker<br>
