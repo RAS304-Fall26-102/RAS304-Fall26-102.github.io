@@ -4,15 +4,15 @@ title: Product Requirements
 
 ## Project Objective
 
-This project aims to create a robotic leg that can be easily understood and leveraged so that other robotic enthusiasts can addapt and utilize this leg into their own systems and createions. One of our goals is to create a leg that is easily understood and easy to use, tweak, and modify from the origional design so that others can either buy our physical leg to avoid the building and wiring or they can aquire the softwear modifiy the design to their needs and then use our original design in their own system, ambitions, work, or entertainment.
+This project aims to create a robotic leg that can be easily understood and leveraged so that other robotic enthusiasts can adapt and utilize this leg in their own systems and creations. One of our goals is to create a leg that is easily understood and easy to use, tweak, and modify from the original design so that others can either buy our physical leg to avoid the building and wiring, or they can acquire the software, modify the design to their needs, and then use our original design in their own system, ambitions, work, or entertainment.
 
 ## Stakeholders
 
-* **Target group** Robotics enthusiasts of all ages looking to addapt pre existing systems into a larger projects, and products.
-* **Target purchaser** Target purchaser are individuals, schools, or buisnesses looking to create or modify a walking or crawling robotics system. 
-* **Customer service** Prefers easy-to-repair, recyclable product, and easy-to-fix complaints.
-* **Marketing & Sales division** Looks for unique selling points to advertise and show off to entise potential and active consumers.
-* **Retailers** Prefer products that can withstand a wide range of storage conditions including variations in temperature, vibration, humidity, and atmospheric pressure, and have a strong and compact, theft, and vandalism-proof packaging.
+* **Target group:** Robotics enthusiasts of all ages looking to adapt pre-existing systems into larger projects and products.
+* **Target purchaser:** Individuals, schools, or businesses looking to create or modify a walking or crawling robotics system. 
+* **Customer service:** Prefers easy-to-repair, recyclable products, and easy-to-fix complaints.
+* **Marketing & Sales division:** Looks for unique selling points to advertise and show off to entice potential and active consumers.
+* **Retailers:** Prefer products that can withstand a wide range of storage conditions, including variations in temperature, vibration, humidity, and atmospheric pressure, and have strong, compact, theft and vandalism-proof packaging.
 
 ## Use Cases
 
