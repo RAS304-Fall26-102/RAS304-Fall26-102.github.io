@@ -32,43 +32,49 @@ The new product design will be based on that of the AirPods with improvements ba
 
 ## Design Aspects
 
- **Hardware/Product Design**
-   * 1.1 The Leg shall be constructed primarily from 3D-printed structural components to enable rapid iteration and low-cost design changes. (P10)
-   * 1.2 The Leg shall use standard metal fasteners (not adhesives or welds) for joint assembly, so components can be disassembled and replaced without specialized tools. (P9)
-   * 1.3 The Leg's structural components shall be printable in commonly available thermoplastics (e.g., PLA, PETG) to keep replacement parts accessible to hobbyists. (P8)
-   * 1.4 The Leg's housing and joints shall be designed for tool-based disassembly (screws/fasteners only) to support customer-service repairability. (P8)
-   * 1.5 The Leg's printed components shall use single-material construction where possible to support end-of-life recyclability. (P6)
+ **Hardware/Product Design**<br>
+
+   * 1.1 The Leg shall be constructed primarily from 3D-printed structural components to enable rapid iteration and low-cost design changes. (P10)<br>
+   * 1.2 The Leg shall use standard metal fasteners (not adhesives or welds) for joint assembly, so components can be disassembled and replaced without specialized tools. (P9)<br>
+   * 1.3 The Leg's structural components shall be printable in commonly available thermoplastics (e.g., PLA, PETG) to keep replacement parts accessible to hobbyists. (P8)<br>
+   * 1.4 The Leg's housing and joints shall be designed for tool-based disassembly (screws/fasteners only) to support customer-service repairability. (P8)<br>
+   * 1.5 The Leg's printed components shall use single-material construction where possible to support end-of-life recyclability. (P6)<br>
 
 **Software/Functionality**
-   * 2.1 The Leg's control software shall be written in Python to maximize accessibility for hobbyist and student developers. (P10)
-   * 2.2 The Leg shall use industry-standard communication protocols (UART and I2C) for sensor and actuator intercommunication, to ease integration with third-party components. (P9)
-   * 2.3 The Leg's software shall be modular, separating motion control, sensor input, and communication layers, so individual modules can be modified without rewriting the full stack. (P8)
-   * 2.4 The Leg's codebase shall include inline documentation and a setup guide sufficient for a first-time user to run a basic movement demo within one hour. (P7)
 
-**Interactivity**
-   * 3.1 The Leg shall support wireless control via Bluetooth from a companion smartphone application as the primary user interaction method. (P10)
-   * 3.2 The Leg's control interface shall expose an open API/command set so users can build alternative control schemes (e.g., gamepad, voice, autonomous scripts) beyond the phone app. (P8)
-   * 3.3 The companion app shall provide basic diagnostic feedback (connection status, battery level, joint position) to support ease of troubleshooting. (P7)
+   * 2.1 The Leg's control software shall be written in Python to maximize accessibility for hobbyist and student developers. (P10)<br>
 
-**Customization**
-   * 4.1 The Leg's software and firmware shall be released under an open-source license to allow unrestricted modification by end users. (P10)
-   * 4.2 The Leg's hardware design files (CAD models, wiring diagrams) shall be published openly to support customization and replacement-part fabrication by end users. (P9)
-   * 4.3 The Leg shall ship with a fixed, standardized hardware configuration to keep manufacturing and initial support costs predictable, while allowing full post-purchase modification. (P7)
-   * 4.4 The Leg's design shall use commonly available off-the-shelf fasteners and connectors (not proprietary parts) to simplify sourcing of replacement or upgraded components. (P8)
+   * 2.2 The Leg shall use industry-standard communication protocols (UART and I2C) for sensor and actuator intercommunication, to ease integration with third-party components. (P9)<br>
 
-**Manufacturing**
-   * 5.1 The Leg's body shall be manufactured using 3D-printed parts to minimize tooling costs and allow rapid design revisions. (P10)
-   * 5.2 The Leg's electronic and mechanical subcomponents (motors, fasteners, bearings) shall be sourced as off-the-shelf parts to ensure long-term replaceability. (P9)
-   * 5.3 The Leg's packaging shall be designed to withstand variation in temperature, humidity, vibration, and atmospheric pressure encountered during standard retail shipping and storage. (P8)
-   * 5.4 The Leg's packaging shall be tamper-evident and resistant to theft and vandalism to meet retailer handling requirements. (P7)
-   * 5.5 The Leg's packaging materials shall be recyclable or reusable where feasible, in line with sustainability-focused customer service goals. (P5)
+   * 2.3 The Leg's software shall be modular, separating motion control, sensor input, and communication layers, so individual modules can be modified without rewriting the full stack. (P8)<br>
+
+   * 2.4 The Leg's codebase shall include inline documentation and a setup guide sufficient for a first-time user to run a basic movement demo within one hour. (P7)<br>
+
+**Interactivity**<br>
+
+   * 3.1 The Leg shall support wireless control via Bluetooth from a companion smartphone application as the primary user interaction method. (P10)<br>
+   * 3.2 The Leg's control interface shall expose an open API/command set so users can build alternative control schemes (e.g., gamepad, voice, autonomous scripts) beyond the phone app. (P8)<br>
+   * 3.3 The companion app shall provide basic diagnostic feedback (connection status, battery level, joint position) to support ease of troubleshooting. (P7)<br>
+
+**Customization**<br>
+   * 4.1 The Leg's software and firmware shall be released under an open-source license to allow unrestricted modification by end users. (P10)<br>
+   * 4.2 The Leg's hardware design files (CAD models, wiring diagrams) shall be published openly to support customization and replacement-part fabrication by end users. (P9)<br>
+   * 4.3 The Leg shall ship with a fixed, standardized hardware configuration to keep manufacturing and initial support costs predictable, while allowing full post-purchase modification. (P7)<br>
+   * 4.4 The Leg's design shall use commonly available off-the-shelf fasteners and connectors (not proprietary parts) to simplify sourcing of replacement or upgraded components. (P8)<br>
+
+**Manufacturing**<br>
+   * 5.1 The Leg's body shall be manufactured using 3D-printed parts to minimize tooling costs and allow rapid design revisions. (P10)<br>
+   * 5.2 The Leg's electronic and mechanical subcomponents (motors, fasteners, bearings) shall be sourced as off-the-shelf parts to ensure long-term replaceability. (P9)<br>
+   * 5.3 The Leg's packaging shall be designed to withstand variation in temperature, humidity, vibration, and atmospheric pressure encountered during standard retail shipping and storage. (P8)<br>
+   * 5.4 The Leg's packaging shall be tamper-evident and resistant to theft and vandalism to meet retailer handling requirements. (P7)<br>
+   * 5.5 The Leg's packaging materials shall be recyclable or reusable where feasible, in line with sustainability-focused customer service goals. (P5)<br>
 
 **Safety**
-   * 6.1 The Leg's actuators shall include current-limiting or stall-detection safeguards to prevent motor burnout or injury from pinch points during operation. (P10)
-   * 6.2 The Leg's exposed moving joints shall be shielded or guarded to reduce pinch-point risk during normal handling, particularly for younger hobbyist users. (P9)
-   * 6.3 The Leg's electronics shall operate within a battery/power system that includes over-voltage and over-current protection to prevent fire or component damage. (P9)
-   * 6.4 The Leg's default software behavior shall include a fail-safe stop state (e.g., loss of Bluetooth connection halts motion) to prevent uncontrolled movement. (P9)
-   * 6.5 The Leg's materials shall be non-toxic and free of sharp edges from the printing/manufacturing process, given the target audience includes younger enthusiasts. (P7)
+   * 6.1 The Leg's actuators shall include current-limiting or stall-detection safeguards to prevent motor burnout or injury from pinch points during operation. (P10)<br>
+   * 6.2 The Leg's exposed moving joints shall be shielded or guarded to reduce pinch-point risk during normal handling, particularly for younger hobbyist users. (P9)<br>
+   * 6.3 The Leg's electronics shall operate within a battery/power system that includes over-voltage and over-current protection to prevent fire or component damage. (P9)<br>
+   * 6.4 The Leg's default software behavior shall include a fail-safe stop state (e.g., loss of Bluetooth connection halts motion) to prevent uncontrolled movement. (P9)<br>
+   * 6.5 The Leg's materials shall be non-toxic and free of sharp edges from the printing/manufacturing process, given the target audience includes younger enthusiasts. (P7)<br>
 
 
 <!-- ## Requirement Criteria Specifications EXAMPLE
