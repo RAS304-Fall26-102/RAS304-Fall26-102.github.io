@@ -34,6 +34,7 @@ This project aims to create a robotic leg that can be easily understood and leve
 The new product design will be based on that of the AirPods with improvements based on the following requirements. The **P1 - P10** is the "code" to indicate the priority of the requirement, from low to high. -->
 
 ## Design Aspects
+   The **P1 - P10** is the "code" to indicate the priority of the requirement, from low to high.
 
  **Hardware/Product Design**<br>
 
@@ -60,24 +61,39 @@ The new product design will be based on that of the AirPods with improvements ba
    * 3.3 The companion app shall provide basic diagnostic feedback (connection status, battery level, joint position) to support ease of troubleshooting. (P7)<br>
 
 **Customization**<br>
+
    * 4.1 The Leg's software and firmware shall be released under an open-source license to allow unrestricted modification by end users. (P10)<br>
+
    * 4.2 The Leg's hardware design files (CAD models, wiring diagrams) shall be published openly to support customization and replacement-part fabrication by end users. (P9)<br>
+
    * 4.3 The Leg shall ship with a fixed, standardized hardware configuration to keep manufacturing and initial support costs predictable, while allowing full post-purchase modification. (P7)<br>
+
    * 4.4 The Leg's design shall use commonly available off-the-shelf fasteners and connectors (not proprietary parts) to simplify sourcing of replacement or upgraded components. (P8)<br>
 
 **Manufacturing**<br>
+
    * 5.1 The Leg's body shall be manufactured using 3D-printed parts to minimize tooling costs and allow rapid design revisions. (P10)<br>
+
    * 5.2 The Leg's electronic and mechanical subcomponents (motors, fasteners, bearings) shall be sourced as off-the-shelf parts to ensure long-term replaceability. (P9)<br>
+
    * 5.3 The Leg's packaging shall be designed to withstand variation in temperature, humidity, vibration, and atmospheric pressure encountered during standard retail shipping and storage. (P8)<br>
+
    * 5.4 The Leg's packaging shall be tamper-evident and resistant to theft and vandalism to meet retailer handling requirements. (P7)<br>
+
    * 5.5 The Leg's packaging materials shall be recyclable or reusable where feasible, in line with sustainability-focused customer service goals. (P5)<br>
 
 **Safety**
+
    * 6.1 The Leg's actuators shall include current-limiting or stall-detection safeguards to prevent motor burnout or injury from pinch points during operation. (P10)<br>
+
    * 6.2 The Leg's exposed moving joints shall be shielded or guarded to reduce pinch-point risk during normal handling, particularly for younger hobbyist users. (P9)<br>
+
    * 6.3 The Leg's electronics shall operate within a battery/power system that includes over-voltage and over-current protection to prevent fire or component damage. (P9)<br>
+
    * 6.4 The Leg's default software behavior shall include a fail-safe stop state (e.g., loss of Bluetooth connection halts motion) to prevent uncontrolled movement. (P9)<br>
+
    * 6.5 The Leg's materials shall be non-toxic and free of sharp edges from the printing/manufacturing process, given the target audience includes younger enthusiasts. (P7)<br>
+
 
 
 <!-- ## Requirement Criteria Specifications EXAMPLE
