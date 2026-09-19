@@ -96,10 +96,38 @@ The new product design will be based on that of the AirPods with improvements ba
 
 
 
-<!-- ## Requirement Criteria Specifications EXAMPLE
+## Requirement Criteria Specifications
 
-* 1.1.1 - Regulate system power from 9 volts to 5 volts
-* 1.1.2 - Provide over-amperage project to not exceed 1.5 amps.
+The following Requirement Criteria Specifications define how each product requirement will be verified. Each criterion provides a measurable or observable method for determining whether the final robotic leg meets the corresponding requirement. Verification will be completed through inspection, analysis, testing, or demonstration.
+
+| Requirement | Requirement Criteria Specification | Verification Method |
+| --- | --- | --- |
+| **1.1** | At least 75% of the Leg's custom structural components, by part count, shall be manufactured using 3D printing. | Inspection |
+| **1.2** | All structural joints shall use removable metal fasteners and shall be capable of disassembly using standard hand tools without cutting, welding, or destroying components. | Inspection / Demonstration |
+| **1.3** | All custom 3D-printed structural components shall be successfully printable using commonly available PLA or PETG filament. | Inspection / Demonstration |
+| **1.4** | A designated structural link shall be removable and reinstalled using standard hand tools in 20 minutes or less. | Demonstration |
+| **1.5** | Each 3D-printed structural component shall use a single identified thermoplastic material where possible. | Inspection |
+| **2.1** | The Leg's primary control software shall be written in Python and shall successfully execute a basic movement command. | Inspection / Demonstration |
+| **2.2** | The Leg shall successfully transmit required sensor and actuator data using the implemented UART and I2C communication interfaces during 10 consecutive communication trials without communication failure. | Test |
+| **2.3** | Motion control, sensor input, and communication functions shall exist as separately identifiable software modules that can be modified independently. | Inspection |
+| **2.4** | A first-time user shall be able to follow the provided documentation and successfully run the basic movement demonstration within 60 minutes. | Demonstration |
+| **3.1** | The Leg shall successfully connect to the companion smartphone application through Bluetooth and execute at least one movement command wirelessly. | Demonstration |
+| **3.2** | The documented API or command set shall successfully accept a movement command from at least one control method other than the companion smartphone application. | Demonstration |
+| **3.3** | The companion application shall display connection status, battery level, and joint-position information during operation. | Demonstration |
+| **4.1** | The software and firmware repository shall contain an identified open-source license and provide access to the source files required for user modification. | Inspection |
+| **4.2** | The published project documentation shall provide accessible CAD models and wiring diagrams required to reproduce or modify the Leg. | Inspection |
+| **4.3** | The completed Leg shall use one documented standard hardware configuration while allowing components to be removed or replaced after assembly. | Inspection / Demonstration |
+| **4.4** | Fasteners and connectors used in the Leg shall be commercially available, non-proprietary components identifiable by standard part specifications. | Inspection |
+| **5.1** | All custom body components designated for additive manufacturing shall be successfully manufactured using 3D printing. | Inspection |
+| **5.2** | Motors, fasteners, bearings, and other designated electronic and mechanical subcomponents shall have commercially available replacement parts or documented equivalents. | Inspection |
+| **5.3** | The packaged Leg shall show no visible structural damage and shall remain functional following the team's defined environmental and shipping-condition tests. | Test |
+| **5.4** | The final packaging shall contain a tamper-evident feature that provides visible evidence after the package has been opened or altered. | Inspection / Demonstration |
+| **5.5** | Packaging materials shall be identified and documented as recyclable or reusable where feasible. | Inspection |
+| **6.1** | When an actuator is intentionally stalled during a controlled test, the current-limiting or stall-detection safeguard shall activate and stop or limit actuator drive before the actuator exceeds its rated operating limits. | Test |
+| **6.2** | All identified accessible pinch points shall include a physical shield or guard that prevents direct contact with the moving joint during normal handling. | Inspection |
+| **6.3** | The Leg's power system shall include documented over-voltage and over-current protection appropriate for the rated voltage and current of the selected electronics. | Inspection / Analysis |
+| **6.4** | Disconnecting the Bluetooth connection while the Leg is moving shall cause the system to enter its fail-safe state and stop commanded movement. | Test |
+| **6.5** | All user-accessible manufactured surfaces shall be visually and physically inspected for sharp edges, and the selected structural materials shall have documentation identifying them as non-toxic for their intended use. | Inspection |
 
 ## Open Questions
 
