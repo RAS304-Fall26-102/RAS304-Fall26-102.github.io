@@ -14,11 +14,11 @@ This project aims to create a robotic leg that can be easily understood and leve
 * **Marketing & Sales division:** Looks for unique selling points to advertise and show off to entice potential and active consumers.
 * **Retailers:** Prefer products that can withstand a wide range of storage conditions, including variations in temperature, vibration, humidity, and atmospheric pressure, and have strong, compact, theft and vandalism-proof packaging.
 
-<!-- ## Use Cases  EXAMPLE
+## Use Cases  EXAMPLE
 
-### User Story #1: Jenna
+ User Story #1: Jenna
 
-Jenna is a 33-year-old executive who regularly visits a bar for lunch to blow off some steam. The bar is often loud with people, but it is paramount that she can hold business conversations over the phone there. Then again, she does not want to miss out on the atmosphere and be able to hear the waiters as well. Her new Apple wireless earphones allow her to switch instantly between a mode where she can fully focus on the phone conversation and a mode where the phone call and environmental sound are seamlessly combined. They also allow her to rapidly adjust the volume on the earbuds themselves without having to take out her phone.
+Akshan is a 20-old executive who regularly visits a bar for lunch to blow off some steam. The bar is often loud with people, but it is paramount that she can hold business conversations over the phone there. Then again, she does not want to miss out on the atmosphere and be able to hear the waiters as well. Her new Apple wireless earphones allow her to switch instantly between a mode where she can fully focus on the phone conversation and a mode where the phone call and environmental sound are seamlessly combined. They also allow her to rapidly adjust the volume on the earbuds themselves without having to take out her phone.
 
 Jenna occasionally visits the bar in the evenings. She is a big fan of the L.A. Lakers, and whenever they play, she streams the live footage through her phone. Her new earbuds allow her to easily switch to hearing everything around her and streaming the match commentary without having to ever take the earbuds out.  She sometimes gets compliments on how stylish the earbuds look on her, and she wouldn’t want to miss out on hearing those either.
 
