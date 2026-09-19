@@ -633,6 +633,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#requirement-criteria-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement Criteria Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -894,6 +916,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#requirement-criteria-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirement Criteria Specifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1030,15 +1074,154 @@
 <p>6.5 The Leg's materials shall be non-toxic and free of sharp edges from the printing/manufacturing process, given the target audience includes younger enthusiasts. (P7)<br></p>
 </li>
 </ul>
-<!-- ## Requirement Criteria Specifications EXAMPLE
-
-* 1.1.1 - Regulate system power from 9 volts to 5 volts
-* 1.1.2 - Provide over-amperage project to not exceed 1.5 amps.
-
-## Open Questions
-
-* Can we move towards a recyclable and repairable product, for example, with ZIF connectors and glue-free assembly?
-* Can we improve on failing or self-igniting batteries? -->
+<h2 id="requirement-criteria-specifications">Requirement Criteria Specifications</h2>
+<p>The following Requirement Criteria Specifications define how each product requirement will be verified. Each criterion provides a measurable or observable method for determining whether the final robotic leg meets the corresponding requirement. Verification will be completed through inspection, analysis, testing, or demonstration.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Requirement Criteria Specification</th>
+<th>Verification Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.1</strong></td>
+<td>At least 75% of the Leg's custom structural components, by part count, shall be manufactured using 3D printing.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>1.2</strong></td>
+<td>All structural joints shall use removable metal fasteners and shall be capable of disassembly using standard hand tools without cutting, welding, or destroying components.</td>
+<td>Inspection / Demonstration</td>
+</tr>
+<tr>
+<td><strong>1.3</strong></td>
+<td>All custom 3D-printed structural components shall be successfully printable using commonly available PLA or PETG filament.</td>
+<td>Inspection / Demonstration</td>
+</tr>
+<tr>
+<td><strong>1.4</strong></td>
+<td>A designated structural link shall be removable and reinstalled using standard hand tools in 20 minutes or less.</td>
+<td>Demonstration</td>
+</tr>
+<tr>
+<td><strong>1.5</strong></td>
+<td>Each 3D-printed structural component shall use a single identified thermoplastic material where possible.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>2.1</strong></td>
+<td>The Leg's primary control software shall be written in Python and shall successfully execute a basic movement command.</td>
+<td>Inspection / Demonstration</td>
+</tr>
+<tr>
+<td><strong>2.2</strong></td>
+<td>The Leg shall successfully transmit required sensor and actuator data using the implemented UART and I2C communication interfaces during 10 consecutive communication trials without communication failure.</td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>2.3</strong></td>
+<td>Motion control, sensor input, and communication functions shall exist as separately identifiable software modules that can be modified independently.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>2.4</strong></td>
+<td>A first-time user shall be able to follow the provided documentation and successfully run the basic movement demonstration within 60 minutes.</td>
+<td>Demonstration</td>
+</tr>
+<tr>
+<td><strong>3.1</strong></td>
+<td>The Leg shall successfully connect to the companion smartphone application through Bluetooth and execute at least one movement command wirelessly.</td>
+<td>Demonstration</td>
+</tr>
+<tr>
+<td><strong>3.2</strong></td>
+<td>The documented API or command set shall successfully accept a movement command from at least one control method other than the companion smartphone application.</td>
+<td>Demonstration</td>
+</tr>
+<tr>
+<td><strong>3.3</strong></td>
+<td>The companion application shall display connection status, battery level, and joint-position information during operation.</td>
+<td>Demonstration</td>
+</tr>
+<tr>
+<td><strong>4.1</strong></td>
+<td>The software and firmware repository shall contain an identified open-source license and provide access to the source files required for user modification.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>4.2</strong></td>
+<td>The published project documentation shall provide accessible CAD models and wiring diagrams required to reproduce or modify the Leg.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>4.3</strong></td>
+<td>The completed Leg shall use one documented standard hardware configuration while allowing components to be removed or replaced after assembly.</td>
+<td>Inspection / Demonstration</td>
+</tr>
+<tr>
+<td><strong>4.4</strong></td>
+<td>Fasteners and connectors used in the Leg shall be commercially available, non-proprietary components identifiable by standard part specifications.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>5.1</strong></td>
+<td>All custom body components designated for additive manufacturing shall be successfully manufactured using 3D printing.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>5.2</strong></td>
+<td>Motors, fasteners, bearings, and other designated electronic and mechanical subcomponents shall have commercially available replacement parts or documented equivalents.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>5.3</strong></td>
+<td>The packaged Leg shall show no visible structural damage and shall remain functional following the team's defined environmental and shipping-condition tests.</td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>5.4</strong></td>
+<td>The final packaging shall contain a tamper-evident feature that provides visible evidence after the package has been opened or altered.</td>
+<td>Inspection / Demonstration</td>
+</tr>
+<tr>
+<td><strong>5.5</strong></td>
+<td>Packaging materials shall be identified and documented as recyclable or reusable where feasible.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>6.1</strong></td>
+<td>When an actuator is intentionally stalled during a controlled test, the current-limiting or stall-detection safeguard shall activate and stop or limit actuator drive before the actuator exceeds its rated operating limits.</td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>6.2</strong></td>
+<td>All identified accessible pinch points shall include a physical shield or guard that prevents direct contact with the moving joint during normal handling.</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td><strong>6.3</strong></td>
+<td>The Leg's power system shall include documented over-voltage and over-current protection appropriate for the rated voltage and current of the selected electronics.</td>
+<td>Inspection / Analysis</td>
+</tr>
+<tr>
+<td><strong>6.4</strong></td>
+<td>Disconnecting the Bluetooth connection while the Leg is moving shall cause the system to enter its fail-safe state and stop commanded movement.</td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>6.5</strong></td>
+<td>All user-accessible manufactured surfaces shall be visually and physically inspected for sharp edges, and the selected structural materials shall have documentation identifying them as non-toxic for their intended use.</td>
+<td>Inspection</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-questions">Open Questions</h2>
+<ul>
+<li>Can we move towards a recyclable and repairable product, for example, with ZIF connectors and glue-free assembly?</li>
+<li>Can we improve on failing or self-igniting batteries? --&gt;</li>
+</ul>
 
 
 
