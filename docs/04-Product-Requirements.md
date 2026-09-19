@@ -14,17 +14,19 @@ This project aims to create a robotic leg that can be easily understood and leve
 * **Marketing & Sales division:** Looks for unique selling points to advertise and show off to entice potential and active consumers.
 * **Retailers:** Prefer products that can withstand a wide range of storage conditions, including variations in temperature, vibration, humidity, and atmospheric pressure, and have strong, compact, theft and vandalism-proof packaging.
 
-## Use Cases<br>
+## Use Cases
 
 ### User Story #1 : Buzz Lightyear
 
-**Goal:** Create a multi-legged prop for a live-action film scene.<br>
-**Scenario:** Buzz Lightyear is a Porp Master on an upcomming horror film set. He needs to control eight spider legs, he just buys eight of them and uses a custom setup rather than a mobile phone app. Using the open API and Bluetooth control interface, Jordan bypasses the standard companion application and writes a custom script to sync the leg's movement with his choice of external components and body.<br> 
+**Goal:** Create a multi-legged prop for a live-action film scene.  
+
+**Scenario:** Buzz Lightyear is a Prop Master on an upcomming horror film set. He needs to control eight spider legs, he just buys eight of them and uses a custom setup rather than a mobile phone app. Using the open API and Bluetooth control interface, Jordan bypasses the standard companion application and writes a custom script to sync the leg's movement with his choice of external components and body.  
 
 ### User Story #2 : Jhon Doe
 
-**Goal:** Wants to build a custom quadruped or hexaped crawler without designing mechanical limbs from scratch.<br>
-**Scenario:** Jhon Doe is a 22 year old working on a custom spider bot project. He buys four assembled physical legs so he can jump straight into quadruped locomotion. During a bench test, one of the links break becuase of his mistakes. Because the leg uses off the shelf fasteners, PLA/PETG 3D-printed parts, and non-proprietary mechanical components, Jhon uses his home 3D printer and standard Allen M-size bolts to swap out the damaged link in 20 minutes without needing specialized tools or replacing the whole unit.<br>
+**Goal:** Wants to build a custom quadruped or hexaped crawler without designing mechanical limbs from scratch.  
+
+**Scenario:** Jhon Doe is a 22 year old working on a custom spider bot project. He buys four assembled physical legs so he can jump straight into quadruped locomotion. During a bench test, one of the links break becuase of his mistakes. Because the leg uses off the shelf fasteners, PLA/PETG 3D-printed parts, and non-proprietary mechanical components, Jhon uses his home 3D printer and standard Allen M-size bolts to swap out the damaged link in 20 minutes without needing specialized tools or replacing the whole unit.
 
 
 ## Aspects
