@@ -582,10 +582,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Table of Contents
       
     </span>
   </a>
@@ -746,10 +746,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Table of Contents
       
     </span>
   </a>
@@ -790,215 +790,823 @@
 
 
 <h1 id="ideation-and-concept-generation">Ideation and Concept Generation</h1>
-<h2 id="overview">Overview</h2>
 <p>The purpose of this design ideation phase was to explore a wide range of possible features for a modular robotic leg intended for a six-legged walking robot.</p>
-<p>Rather than selecting one design immediately, the team generated approximately 100 individual product features covering joint architecture, actuation, sensing, structural design, foot interaction, modularity, and control. These ideas were then grouped and ranked before being combined into three distinct product concepts.</p>
+<p>Rather than selecting one design immediately, the team generated approximately 100 individual product features covering joint architecture, actuation, sensing, structural design, foot interaction, modularity, and control. These ideas were grouped, ranked, and combined into three distinct product concepts.</p>
 <hr>
-<h1 id="initial-brainstorm">Initial Brainstorm</h1>
-<p>The brainstorm focused on generating individual features that could later be combined into complete robotic-leg designs.</p>
-<h2 id="joint-architecture-and-kinematics">Joint Architecture and Kinematics</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ol>
-<li>Three-degree-of-freedom leg with hip yaw, hip pitch, and knee pitch</li>
-<li>Two-degree-of-freedom leg for simpler control</li>
-<li>Offset hip joint to increase lateral workspace</li>
-<li>Four-bar linkage to control foot motion</li>
-<li>Parallel-link knee mechanism for improved load support</li>
-<li>Mechanical linkage that keeps the foot approximately level</li>
-<li>Adjustable upper-leg link length</li>
-<li>Adjustable lower-leg link length</li>
-<li>Interchangeable link geometry for different stride lengths</li>
-<li>Mechanical joint stops to prevent over-rotation</li>
-<li>Adjustable joint-angle limits</li>
-<li>Foldable leg configuration for compact storage</li>
-<li>Joint geometry designed to maximize useful workspace</li>
-<li>Joint spacing designed to reduce self-collision</li>
-<li>Leg geometry designed around a repeatable walking arc</li>
-</ol>
-<h2 id="rotary-and-linear-actuation">Rotary and Linear Actuation</h2>
-<ol>
-<li>High-torque digital servo at the hip</li>
-<li>High-torque digital servo at the knee</li>
-<li>Compact servo at the distal joint</li>
-<li>Brushless motor with planetary gearbox</li>
-<li>Geared DC motor with encoder feedback</li>
-<li>Stepper motor for precise joint positioning</li>
-<li>Worm-drive actuator for high holding torque</li>
-<li>Belt-reduction transmission</li>
-<li>Cable-driven joint</li>
-<li>Electric linear actuator</li>
-<li>Electric linear actuator driving a four-bar linkage</li>
-<li>Electric linear actuator with built-in position feedback</li>
-<li>Lead-screw actuator</li>
-<li>Pneumatic linear actuator</li>
-<li>Double-acting pneumatic cylinder</li>
-<li>Pneumatic cylinder with adjustable flow control</li>
-<li>Hydraulic linear actuator</li>
-<li>Hydraulic cylinder with pressure sensing</li>
-<li>Spring-assisted actuator</li>
-<li>Series-elastic actuator</li>
-</ol>
-<h2 id="actuator-mounting-and-force-transmission">Actuator Mounting and Force Transmission</h2>
-<ol>
-<li>Quick-release actuator mounting bracket</li>
-<li>Modular actuator cartridge</li>
-<li>Clevis-mounted linear actuator</li>
-<li>Rocker linkage</li>
-<li>Bell-crank mechanism</li>
-<li>Adjustable actuator attachment point</li>
-<li>Pushrod linkage</li>
-<li>Dual-actuator joint</li>
-<li>Counterbalance spring at the hip</li>
-<li>Mechanical leverage system to reduce actuator force requirements</li>
-</ol>
-<h2 id="position-and-motion-feedback">Position and Motion Feedback</h2>
-<ol>
-<li>Absolute magnetic encoder at the hip</li>
-<li>Absolute magnetic encoder at the knee</li>
-<li>Incremental encoder with startup homing</li>
-<li>Potentiometer-based joint-angle sensing</li>
-<li>Hall-effect joint-angle sensing</li>
-<li>Linear potentiometer for actuator extension</li>
-<li>Encoder mounted directly on the joint output shaft</li>
-<li>Joint velocity calculated from encoder data</li>
-<li>IMU mounted on the upper leg</li>
-<li>IMU mounted near the foot</li>
-<li>Home-position sensor</li>
-<li>End-of-travel sensor</li>
-<li>Slip detection using commanded and measured position</li>
-<li>Backlash estimation using position feedback</li>
-<li>Sensor fusion between encoder and IMU data</li>
-</ol>
-<h2 id="foot-and-ground-contact">Foot and Ground Contact</h2>
-<ol>
-<li>Force-sensitive resistor in the foot</li>
-<li>Load cell for measuring ground reaction force</li>
-<li>Multiple force sensors across the foot</li>
-<li>Contact switch for ground detection</li>
-<li>Compliant rubber foot pad</li>
-<li>Replaceable high-friction foot insert</li>
-<li>Rounded foot for uneven surfaces</li>
-<li>Wide foot for soft terrain</li>
-<li>Narrow foot for hard indoor surfaces</li>
-<li>Articulated foot</li>
-<li>Spring-loaded foot</li>
-<li>Damped foot mechanism</li>
-<li>Interchangeable foot designs</li>
-<li>Toe-style obstacle-climbing tip</li>
-<li>Foot geometry designed to reduce slipping</li>
-</ol>
-<h2 id="gecko-gripper-and-end-effector-concepts">Gecko Gripper and End-Effector Concepts</h2>
-<ol>
-<li>Gecko-inspired adhesive foot</li>
-<li>Gecko gripper end effector</li>
-<li>Interchangeable gecko foot module</li>
-<li>Passive gecko adhesive pad</li>
-<li>Actively engaged gecko gripper</li>
-<li>Directional gecko adhesive surface</li>
-<li>Compliant gecko foot mount</li>
-<li>Gecko pad with integrated force sensing</li>
-<li>Hybrid rubber and gecko adhesive foot</li>
-<li>Replaceable end-effector interface</li>
-</ol>
-<h2 id="structural-design">Structural Design</h2>
-<ol>
-<li>Lightweight aluminum upper-leg link</li>
-<li>Lightweight aluminum lower-leg link</li>
-<li>Carbon-fiber link with printed fittings</li>
-<li>Reinforced 3D-printed nylon link</li>
-<li>Fiber-reinforced polymer structure</li>
-<li>Hollow structural members</li>
-<li>Ribbed printed geometry</li>
-<li>Topology-optimized leg link</li>
-<li>Removable side plates</li>
-<li>Heat-set threaded inserts</li>
-</ol>
-<h2 id="wiring-safety-and-control">Wiring, Safety, and Control</h2>
-<ol>
-<li>Internal cable routing through the leg</li>
-<li>Strain relief near moving joints</li>
-<li>Motor-current sensing for stall detection</li>
-<li>Automatic startup calibration</li>
-<li>Closed-loop position control with an emergency fault state</li>
+<li><a href="#project-focus">Project Focus</a></li>
+<li><a href="#initial-brainstorm">Initial Brainstorm</a></li>
+<li><a href="#joint-architecture-and-kinematics">Joint Architecture and Kinematics</a></li>
+<li><a href="#rotary-and-linear-actuation">Rotary and Linear Actuation</a></li>
+<li><a href="#actuator-mounting-and-force-transmission">Actuator Mounting and Force Transmission</a></li>
+<li><a href="#position-and-motion-feedback">Position and Motion Feedback</a></li>
+<li><a href="#foot-and-ground-contact">Foot and Ground Contact</a></li>
+<li><a href="#gecko-gripper-and-end-effector-concepts">Gecko Gripper and End-Effector Concepts</a></li>
+<li><a href="#structural-design">Structural Design</a></li>
+<li><a href="#wiring-safety-and-control">Wiring, Safety, and Control</a></li>
+<li><a href="#grouping-and-ranking">Grouping and Ranking</a></li>
+<li><a href="#top-ranked-features">Top Ranked Features</a></li>
+<li><a href="#complete-feature-ranking">Complete Feature Ranking</a></li>
+<li><a href="#product-concepts">Product Concepts</a></li>
+<li><a href="#concept-1--rotary-servo-actuated-leg">Concept 1: Rotary Servo-Actuated Leg</a></li>
+<li><a href="#concept-2--electric-linear-actuator-leg">Concept 2: Electric Linear-Actuator Leg</a></li>
+<li><a href="#concept-3--linear-actuated-leg-with-gecko-end-effector">Concept 3: Linear-Actuated Leg with Gecko End Effector</a></li>
+<li><a href="#concept-comparison">Concept Comparison</a></li>
+<li><a href="#selected-features-moving-forward">Selected Features Moving Forward</a></li>
+<li><a href="#brainstorming-process">Brainstorming Process</a></li>
+<li><a href="#design-ideation-video">Design Ideation Video</a></li>
 </ol>
 <hr>
-<h2 id="initial-brainstorm-snapshot">Initial Brainstorm Snapshot</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/initial-brainstorm.png" data-desc-position="bottom"><img alt="Initial Brainstorm" src="images/initial-brainstorm.png"></a></p>
-<hr>
-<h1 id="grouping-and-ranking">Grouping and Ranking</h1>
-<p>After the initial brainstorm, the ideas were grouped according to their primary function. This allowed the team to compare related features and identify which ideas could be combined into complete product concepts.</p>
-<p>The features were ranked based on their importance to the operation, control, safety, modularity, and adaptability of the robotic leg.</p>
-<h2 id="highest-priority-core-features">Highest Priority — Core Features</h2>
+<h1 id="project-focus">Project Focus</h1>
 <table>
 <thead>
 <tr>
-<th style="text-align: right;">Rank</th>
+<th>Design Area</th>
+<th>What We Explored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movement</strong></td>
+<td>Joint geometry, degrees of freedom, and walking range</td>
+</tr>
+<tr>
+<td><strong>Actuation</strong></td>
+<td>Servo motors, rotary motors, and linear actuators</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Encoders, potentiometers, IMUs, and contact sensors</td>
+</tr>
+<tr>
+<td><strong>Ground Interaction</strong></td>
+<td>Foot shape, traction, force sensing, and compliance</td>
+</tr>
+<tr>
+<td><strong>Modularity</strong></td>
+<td>Replaceable actuators, links, feet, and end effectors</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Lightweight and manufacturable leg components</td>
+</tr>
+<tr>
+<td><strong>Safety</strong></td>
+<td>Joint limits, stall detection, calibration, and fault handling</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="initial-brainstorm">Initial Brainstorm</h1>
+<p>The initial brainstorm focused on individual product features rather than complete designs. This allowed the team to generate a large design space before deciding which ideas should be combined.</p>
+<h2 id="joint-architecture-and-kinematics">Joint Architecture and Kinematics</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
 <th>Feature</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: right;">1</td>
-<td>Three-degree-of-freedom leg with hip yaw, hip pitch, and knee pitch</td>
+<td>Three-degree-of-freedom leg</td>
+<td>Provides hip yaw, hip pitch, and knee pitch</td>
 </tr>
 <tr>
 <td style="text-align: right;">2</td>
-<td>High-torque digital servo at the hip</td>
+<td>Two-degree-of-freedom leg</td>
+<td>Simplifies mechanical and control requirements</td>
 </tr>
 <tr>
 <td style="text-align: right;">3</td>
-<td>High-torque digital servo at the knee</td>
+<td>Offset hip joint</td>
+<td>Increases lateral workspace</td>
 </tr>
 <tr>
 <td style="text-align: right;">4</td>
-<td>Absolute magnetic encoder at the hip</td>
+<td>Four-bar linkage</td>
+<td>Controls foot motion mechanically</td>
 </tr>
 <tr>
 <td style="text-align: right;">5</td>
-<td>Absolute magnetic encoder at the knee</td>
+<td>Parallel-link knee mechanism</td>
+<td>Improves load support</td>
 </tr>
 <tr>
 <td style="text-align: right;">6</td>
-<td>Closed-loop position control with emergency fault state</td>
+<td>Foot-leveling linkage</td>
+<td>Helps keep the foot approximately level</td>
 </tr>
 <tr>
 <td style="text-align: right;">7</td>
-<td>Mechanical joint stops</td>
+<td>Adjustable upper-leg link</td>
+<td>Allows leg geometry to be modified</td>
 </tr>
 <tr>
 <td style="text-align: right;">8</td>
-<td>Load cell for measuring ground reaction force</td>
+<td>Adjustable lower-leg link</td>
+<td>Allows leg geometry to be modified</td>
 </tr>
 <tr>
 <td style="text-align: right;">9</td>
-<td>Interchangeable foot designs</td>
+<td>Interchangeable link geometry</td>
+<td>Supports different stride configurations</td>
 </tr>
 <tr>
 <td style="text-align: right;">10</td>
-<td>Modular actuator cartridge</td>
+<td>Mechanical joint stops</td>
+<td>Prevents excessive joint rotation</td>
 </tr>
 <tr>
 <td style="text-align: right;">11</td>
-<td>Joint geometry designed to maximize useful workspace</td>
+<td>Adjustable joint-angle limits</td>
+<td>Allows range of motion to be changed</td>
 </tr>
 <tr>
 <td style="text-align: right;">12</td>
-<td>Motor-current sensing for stall detection</td>
+<td>Foldable leg configuration</td>
+<td>Allows more compact storage</td>
 </tr>
 <tr>
 <td style="text-align: right;">13</td>
-<td>Reinforced 3D-printed nylon structure</td>
+<td>Workspace-optimized joint geometry</td>
+<td>Maximizes useful movement</td>
 </tr>
 <tr>
 <td style="text-align: right;">14</td>
-<td>Automatic startup calibration</td>
+<td>Self-collision optimized spacing</td>
+<td>Reduces interference between components</td>
 </tr>
 <tr>
 <td style="text-align: right;">15</td>
-<td>Adjustable actuator attachment point</td>
+<td>Repeatable walking-arc geometry</td>
+<td>Supports consistent walking motion</td>
 </tr>
 </tbody>
 </table>
-<h2 id="very-strong-features">Very Strong Features</h2>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
+<hr>
+<h2 id="rotary-and-linear-actuation">Rotary and Linear Actuation</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">16</td>
+<td>High-torque hip servo</td>
+<td>Provides powered hip movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>High-torque knee servo</td>
+<td>Provides lifting and support</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>Compact distal servo</td>
+<td>Reduces weight farther down the leg</td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>Brushless motor with planetary gearbox</td>
+<td>Provides efficient high-torque movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>Geared DC motor with encoder</td>
+<td>Combines torque with position feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td>Stepper motor</td>
+<td>Provides controlled incremental movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td>Worm-drive actuator</td>
+<td>Provides high holding torque</td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td>Belt-reduction transmission</td>
+<td>Moves motor mass closer to the body</td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td>Cable-driven joint</td>
+<td>Reduces distal actuator weight</td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td>Electric linear actuator</td>
+<td>Produces controlled linear movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td>Linear actuator with four-bar linkage</td>
+<td>Converts linear movement into joint rotation</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td>Linear actuator with position feedback</td>
+<td>Measures actuator extension</td>
+</tr>
+<tr>
+<td style="text-align: right;">28</td>
+<td>Lead-screw actuator</td>
+<td>Provides controlled linear movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">29</td>
+<td>Pneumatic linear actuator</td>
+<td>Produces rapid extension and retraction</td>
+</tr>
+<tr>
+<td style="text-align: right;">30</td>
+<td>Double-acting pneumatic cylinder</td>
+<td>Provides powered motion in both directions</td>
+</tr>
+<tr>
+<td style="text-align: right;">31</td>
+<td>Pneumatic actuator with flow control</td>
+<td>Allows speed adjustment</td>
+</tr>
+<tr>
+<td style="text-align: right;">32</td>
+<td>Hydraulic linear actuator</td>
+<td>Produces high-force movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">33</td>
+<td>Hydraulic actuator with pressure sensing</td>
+<td>Adds force-related feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;">34</td>
+<td>Spring-assisted actuator</td>
+<td>Reduces required motor load</td>
+</tr>
+<tr>
+<td style="text-align: right;">35</td>
+<td>Series-elastic actuator</td>
+<td>Adds compliance and impact absorption</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
+<hr>
+<h2 id="actuator-mounting-and-force-transmission">Actuator Mounting and Force Transmission</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">36</td>
+<td>Quick-release actuator bracket</td>
+<td>Simplifies actuator replacement</td>
+</tr>
+<tr>
+<td style="text-align: right;">37</td>
+<td>Modular actuator cartridge</td>
+<td>Allows the actuator assembly to be replaced separately</td>
+</tr>
+<tr>
+<td style="text-align: right;">38</td>
+<td>Clevis-mounted linear actuator</td>
+<td>Provides pivoting actuator attachment</td>
+</tr>
+<tr>
+<td style="text-align: right;">39</td>
+<td>Rocker linkage</td>
+<td>Converts actuator movement into joint rotation</td>
+</tr>
+<tr>
+<td style="text-align: right;">40</td>
+<td>Bell-crank mechanism</td>
+<td>Changes force direction</td>
+</tr>
+<tr>
+<td style="text-align: right;">41</td>
+<td>Adjustable actuator attachment point</td>
+<td>Changes mechanical advantage</td>
+</tr>
+<tr>
+<td style="text-align: right;">42</td>
+<td>Pushrod linkage</td>
+<td>Transfers actuator force</td>
+</tr>
+<tr>
+<td style="text-align: right;">43</td>
+<td>Dual-actuator joint</td>
+<td>Increases available load capacity</td>
+</tr>
+<tr>
+<td style="text-align: right;">44</td>
+<td>Hip counterbalance spring</td>
+<td>Reduces actuator load</td>
+</tr>
+<tr>
+<td style="text-align: right;">45</td>
+<td>Mechanical leverage system</td>
+<td>Reduces required actuator force</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="position-and-motion-feedback">Position and Motion Feedback</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">46</td>
+<td>Absolute magnetic hip encoder</td>
+<td>Measures hip position</td>
+</tr>
+<tr>
+<td style="text-align: right;">47</td>
+<td>Absolute magnetic knee encoder</td>
+<td>Measures knee position</td>
+</tr>
+<tr>
+<td style="text-align: right;">48</td>
+<td>Incremental encoder with homing</td>
+<td>Tracks movement after calibration</td>
+</tr>
+<tr>
+<td style="text-align: right;">49</td>
+<td>Potentiometer joint sensing</td>
+<td>Measures joint angle</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td>Hall-effect joint sensing</td>
+<td>Provides contactless angle sensing</td>
+</tr>
+<tr>
+<td style="text-align: right;">51</td>
+<td>Linear potentiometer</td>
+<td>Measures actuator extension</td>
+</tr>
+<tr>
+<td style="text-align: right;">52</td>
+<td>Joint-output encoder</td>
+<td>Measures actual joint position</td>
+</tr>
+<tr>
+<td style="text-align: right;">53</td>
+<td>Calculated joint velocity</td>
+<td>Determines movement speed from encoder data</td>
+</tr>
+<tr>
+<td style="text-align: right;">54</td>
+<td>Upper-leg IMU</td>
+<td>Measures orientation and motion</td>
+</tr>
+<tr>
+<td style="text-align: right;">55</td>
+<td>Foot-mounted IMU</td>
+<td>Measures motion near the ground</td>
+</tr>
+<tr>
+<td style="text-align: right;">56</td>
+<td>Home-position sensor</td>
+<td>Establishes a known reference position</td>
+</tr>
+<tr>
+<td style="text-align: right;">57</td>
+<td>End-of-travel sensor</td>
+<td>Detects joint or actuator limits</td>
+</tr>
+<tr>
+<td style="text-align: right;">58</td>
+<td>Slip detection</td>
+<td>Compares commanded and actual movement</td>
+</tr>
+<tr>
+<td style="text-align: right;">59</td>
+<td>Backlash estimation</td>
+<td>Detects mechanical play</td>
+</tr>
+<tr>
+<td style="text-align: right;">60</td>
+<td>Encoder/IMU sensor fusion</td>
+<td>Combines multiple feedback sources</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="foot-and-ground-contact">Foot and Ground Contact</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">61</td>
+<td>Force-sensitive resistor</td>
+<td>Detects foot contact</td>
+</tr>
+<tr>
+<td style="text-align: right;">62</td>
+<td>Load cell</td>
+<td>Measures ground reaction force</td>
+</tr>
+<tr>
+<td style="text-align: right;">63</td>
+<td>Multiple foot force sensors</td>
+<td>Measures force distribution</td>
+</tr>
+<tr>
+<td style="text-align: right;">64</td>
+<td>Contact switch</td>
+<td>Provides basic ground detection</td>
+</tr>
+<tr>
+<td style="text-align: right;">65</td>
+<td>Compliant rubber foot</td>
+<td>Improves grip and compliance</td>
+</tr>
+<tr>
+<td style="text-align: right;">66</td>
+<td>High-friction foot insert</td>
+<td>Improves traction</td>
+</tr>
+<tr>
+<td style="text-align: right;">67</td>
+<td>Rounded foot</td>
+<td>Improves contact on uneven surfaces</td>
+</tr>
+<tr>
+<td style="text-align: right;">68</td>
+<td>Wide foot</td>
+<td>Supports soft terrain</td>
+</tr>
+<tr>
+<td style="text-align: right;">69</td>
+<td>Narrow foot</td>
+<td>Supports hard indoor surfaces</td>
+</tr>
+<tr>
+<td style="text-align: right;">70</td>
+<td>Articulated foot</td>
+<td>Passively adjusts to terrain</td>
+</tr>
+<tr>
+<td style="text-align: right;">71</td>
+<td>Spring-loaded foot</td>
+<td>Absorbs impacts</td>
+</tr>
+<tr>
+<td style="text-align: right;">72</td>
+<td>Damped foot</td>
+<td>Reduces bounce</td>
+</tr>
+<tr>
+<td style="text-align: right;">73</td>
+<td>Interchangeable feet</td>
+<td>Allows terrain-specific configurations</td>
+</tr>
+<tr>
+<td style="text-align: right;">74</td>
+<td>Toe-style climbing tip</td>
+<td>Assists with obstacles</td>
+</tr>
+<tr>
+<td style="text-align: right;">75</td>
+<td>Anti-slip foot geometry</td>
+<td>Improves stance stability</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="gecko-gripper-and-end-effector-concepts">Gecko Gripper and End-Effector Concepts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">76</td>
+<td>Gecko-inspired adhesive foot</td>
+<td>Provides additional surface attachment</td>
+</tr>
+<tr>
+<td style="text-align: right;">77</td>
+<td>Gecko gripper end effector</td>
+<td>Allows specialized gripping</td>
+</tr>
+<tr>
+<td style="text-align: right;">78</td>
+<td>Interchangeable gecko module</td>
+<td>Preserves modularity</td>
+</tr>
+<tr>
+<td style="text-align: right;">79</td>
+<td>Passive gecko adhesive pad</td>
+<td>Adds attachment without active control</td>
+</tr>
+<tr>
+<td style="text-align: right;">80</td>
+<td>Active gecko gripper</td>
+<td>Allows controlled engagement</td>
+</tr>
+<tr>
+<td style="text-align: right;">81</td>
+<td>Directional gecko surface</td>
+<td>Provides directional adhesion</td>
+</tr>
+<tr>
+<td style="text-align: right;">82</td>
+<td>Compliant gecko mount</td>
+<td>Improves surface contact</td>
+</tr>
+<tr>
+<td style="text-align: right;">83</td>
+<td>Gecko pad with force sensing</td>
+<td>Combines gripping and feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;">84</td>
+<td>Hybrid rubber/gecko foot</td>
+<td>Combines traction and adhesion</td>
+</tr>
+<tr>
+<td style="text-align: right;">85</td>
+<td>Replaceable end-effector interface</td>
+<td>Allows multiple foot attachments</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="structural-design">Structural Design</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">86</td>
+<td>Aluminum upper-leg link</td>
+<td>Provides lightweight structural support</td>
+</tr>
+<tr>
+<td style="text-align: right;">87</td>
+<td>Aluminum lower-leg link</td>
+<td>Provides lightweight structural support</td>
+</tr>
+<tr>
+<td style="text-align: right;">88</td>
+<td>Carbon-fiber link with printed fittings</td>
+<td>Reduces weight</td>
+</tr>
+<tr>
+<td style="text-align: right;">89</td>
+<td>Reinforced 3D-printed nylon link</td>
+<td>Balances cost and strength</td>
+</tr>
+<tr>
+<td style="text-align: right;">90</td>
+<td>Fiber-reinforced polymer</td>
+<td>Provides lightweight structural support</td>
+</tr>
+<tr>
+<td style="text-align: right;">91</td>
+<td>Hollow structural members</td>
+<td>Reduces mass</td>
+</tr>
+<tr>
+<td style="text-align: right;">92</td>
+<td>Ribbed printed geometry</td>
+<td>Improves stiffness</td>
+</tr>
+<tr>
+<td style="text-align: right;">93</td>
+<td>Topology-optimized link</td>
+<td>Removes unnecessary material</td>
+</tr>
+<tr>
+<td style="text-align: right;">94</td>
+<td>Removable side plates</td>
+<td>Improves maintenance access</td>
+</tr>
+<tr>
+<td style="text-align: right;">95</td>
+<td>Heat-set threaded inserts</td>
+<td>Strengthens reusable fastener locations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="wiring-safety-and-control">Wiring, Safety, and Control</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">96</td>
+<td>Internal cable routing</td>
+<td>Protects wiring</td>
+</tr>
+<tr>
+<td style="text-align: right;">97</td>
+<td>Strain relief</td>
+<td>Protects wires near moving joints</td>
+</tr>
+<tr>
+<td style="text-align: right;">98</td>
+<td>Motor-current sensing</td>
+<td>Detects stalls and overloads</td>
+</tr>
+<tr>
+<td style="text-align: right;">99</td>
+<td>Automatic startup calibration</td>
+<td>Establishes known starting positions</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td>Closed-loop control with fault state</td>
+<td>Controls motion and handles faults</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="brainstorm-snapshot">Brainstorm Snapshot</h1>
+<p>The image below shows the brainstorm before the features were finalized into product concepts.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/initial-brainstorm.png" data-desc-position="bottom"><img alt="Initial Brainstorm" src="images/initial-brainstorm.png"></a></p>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
+<hr>
+<h1 id="grouping-and-ranking">Grouping and Ranking</h1>
+<p>After the initial brainstorm, related features were grouped according to their primary purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Main Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Joint Architecture</strong></td>
+<td>How should the leg move?</td>
+</tr>
+<tr>
+<td><strong>Actuation</strong></td>
+<td>What should create the movement?</td>
+</tr>
+<tr>
+<td><strong>Force Transmission</strong></td>
+<td>How should actuator force reach the joints?</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>How will the robot know where the leg is?</td>
+</tr>
+<tr>
+<td><strong>Ground Contact</strong></td>
+<td>How will the foot interact with the surface?</td>
+</tr>
+<tr>
+<td><strong>End Effectors</strong></td>
+<td>What specialized attachments could be used?</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>How can the leg remain strong and lightweight?</td>
+</tr>
+<tr>
+<td><strong>Control &amp; Safety</strong></td>
+<td>How will motion remain controlled and protected?</td>
+</tr>
+</tbody>
+</table>
+<p>The team then ranked the features based on their importance to basic leg operation and their usefulness in future concept development.</p>
+<hr>
+<h1 id="top-ranked-features">Top Ranked Features</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Rank</th>
+<th>Feature</th>
+<th>Why It Ranked Highly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Three-degree-of-freedom leg</td>
+<td>Provides useful spider-like motion</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>High-torque hip servo</td>
+<td>Supports a significant portion of the leg load</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>High-torque knee servo</td>
+<td>Provides lifting and stance support</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Absolute magnetic hip encoder</td>
+<td>Provides reliable hip-position feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Absolute magnetic knee encoder</td>
+<td>Provides reliable knee-position feedback</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>6</strong></td>
+<td>Closed-loop position control</td>
+<td>Improves movement accuracy and safety</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>7</strong></td>
+<td>Mechanical joint stops</td>
+<td>Protects the mechanism</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>8</strong></td>
+<td>Ground-force load cell</td>
+<td>Determines whether the foot is supporting weight</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>9</strong></td>
+<td>Interchangeable foot design</td>
+<td>Supports multiple surfaces and experiments</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>10</strong></td>
+<td>Modular actuator cartridge</td>
+<td>Simplifies testing and repair</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>11</strong></td>
+<td>Workspace-optimized geometry</td>
+<td>Improves useful movement</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>12</strong></td>
+<td>Motor-current sensing</td>
+<td>Detects stalls and jams</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>13</strong></td>
+<td>Reinforced printed structure</td>
+<td>Balances strength, cost, and manufacturing</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>14</strong></td>
+<td>Startup calibration</td>
+<td>Creates a known starting position</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>15</strong></td>
+<td>Adjustable actuator attachment</td>
+<td>Allows torque/speed tradeoffs to be tested</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="complete-feature-ranking">Complete Feature Ranking</h1>
+<h2 id="ranks-1630-very-strong-features">Ranks 16–30 — Very Strong Features</h2>
 <table>
 <thead>
 <tr>
@@ -1013,11 +1621,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">17</td>
-<td>Electric linear actuator with position feedback</td>
+<td>Linear actuator with position feedback</td>
 </tr>
 <tr>
 <td style="text-align: right;">18</td>
-<td>Electric linear actuator driving a four-bar linkage</td>
+<td>Linear actuator with four-bar linkage</td>
 </tr>
 <tr>
 <td style="text-align: right;">19</td>
@@ -1029,7 +1637,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">21</td>
-<td>Encoder mounted directly on the joint output shaft</td>
+<td>Joint-output encoder</td>
 </tr>
 <tr>
 <td style="text-align: right;">22</td>
@@ -1037,7 +1645,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">23</td>
-<td>Quick-release actuator mounting bracket</td>
+<td>Quick-release actuator bracket</td>
 </tr>
 <tr>
 <td style="text-align: right;">24</td>
@@ -1045,19 +1653,19 @@
 </tr>
 <tr>
 <td style="text-align: right;">25</td>
-<td>Adjustable upper-leg link length</td>
+<td>Adjustable upper-leg link</td>
 </tr>
 <tr>
 <td style="text-align: right;">26</td>
-<td>Adjustable lower-leg link length</td>
+<td>Adjustable lower-leg link</td>
 </tr>
 <tr>
 <td style="text-align: right;">27</td>
-<td>Compliant rubber foot pad</td>
+<td>Compliant rubber foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">28</td>
-<td>Strain relief near moving joints</td>
+<td>Strain relief</td>
 </tr>
 <tr>
 <td style="text-align: right;">29</td>
@@ -1069,7 +1677,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="alternative-actuation-concepts">Alternative Actuation Concepts</h2>
+<h2 id="ranks-3140-alternative-actuation">Ranks 31–40 — Alternative Actuation</h2>
 <table>
 <thead>
 <tr>
@@ -1088,7 +1696,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">33</td>
-<td>Pneumatic cylinder with adjustable flow control</td>
+<td>Pneumatic flow control</td>
 </tr>
 <tr>
 <td style="text-align: right;">34</td>
@@ -1096,11 +1704,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">35</td>
-<td>Hydraulic cylinder with pressure sensing</td>
+<td>Hydraulic pressure sensing</td>
 </tr>
 <tr>
 <td style="text-align: right;">36</td>
-<td>Geared DC motor with encoder feedback</td>
+<td>Geared DC motor with encoder</td>
 </tr>
 <tr>
 <td style="text-align: right;">37</td>
@@ -1120,7 +1728,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="sensor-and-feedback-features">Sensor and Feedback Features</h2>
+<h2 id="ranks-4154-sensors-and-feedback">Ranks 41–54 — Sensors and Feedback</h2>
 <table>
 <thead>
 <tr>
@@ -1131,15 +1739,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">41</td>
-<td>Hall-effect joint-angle sensing</td>
+<td>Hall-effect joint sensing</td>
 </tr>
 <tr>
 <td style="text-align: right;">42</td>
-<td>Linear potentiometer for actuator extension</td>
+<td>Linear potentiometer</td>
 </tr>
 <tr>
 <td style="text-align: right;">43</td>
-<td>Potentiometer-based joint-angle sensing</td>
+<td>Rotary potentiometer</td>
 </tr>
 <tr>
 <td style="text-align: right;">44</td>
@@ -1147,7 +1755,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">45</td>
-<td>Foot-mounted IMU</td>
+<td>Foot IMU</td>
 </tr>
 <tr>
 <td style="text-align: right;">46</td>
@@ -1155,7 +1763,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">47</td>
-<td>Multiple force sensors across the foot</td>
+<td>Multiple foot force sensors</td>
 </tr>
 <tr>
 <td style="text-align: right;">48</td>
@@ -1167,7 +1775,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">50</td>
-<td>Encoder and IMU sensor fusion</td>
+<td>Sensor fusion</td>
 </tr>
 <tr>
 <td style="text-align: right;">51</td>
@@ -1179,15 +1787,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">53</td>
-<td>Contact switch</td>
+<td>Ground-contact switch</td>
 </tr>
 <tr>
 <td style="text-align: right;">54</td>
-<td>Incremental encoder with homing</td>
+<td>Incremental encoder</td>
 </tr>
 </tbody>
 </table>
-<h2 id="gecko-gripper-and-end-effector-features">Gecko Gripper and End-Effector Features</h2>
+<h2 id="ranks-5564-gecko-end-effector">Ranks 55–64 — Gecko / End Effector</h2>
 <table>
 <thead>
 <tr>
@@ -1198,11 +1806,11 @@
 <tbody>
 <tr>
 <td style="text-align: right;">55</td>
-<td>Interchangeable gecko foot module</td>
+<td>Interchangeable gecko module</td>
 </tr>
 <tr>
 <td style="text-align: right;">56</td>
-<td>Gecko gripper end effector</td>
+<td>Gecko gripper</td>
 </tr>
 <tr>
 <td style="text-align: right;">57</td>
@@ -1210,11 +1818,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">58</td>
-<td>Compliant gecko foot mount</td>
+<td>Compliant gecko mount</td>
 </tr>
 <tr>
 <td style="text-align: right;">59</td>
-<td>Gecko pad with integrated force sensing</td>
+<td>Gecko pad with force sensing</td>
 </tr>
 <tr>
 <td style="text-align: right;">60</td>
@@ -1222,23 +1830,23 @@
 </tr>
 <tr>
 <td style="text-align: right;">61</td>
-<td>Hybrid rubber and gecko adhesive foot</td>
+<td>Hybrid rubber/gecko foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">62</td>
-<td>Actively engaged gecko gripper</td>
+<td>Active gecko gripper</td>
 </tr>
 <tr>
 <td style="text-align: right;">63</td>
-<td>Directional gecko adhesive surface</td>
+<td>Directional gecko surface</td>
 </tr>
 <tr>
 <td style="text-align: right;">64</td>
-<td>Passive gecko adhesive pad</td>
+<td>Passive gecko pad</td>
 </tr>
 </tbody>
 </table>
-<h2 id="mechanical-structure-and-transmission">Mechanical Structure and Transmission</h2>
+<h2 id="ranks-6580-mechanical-structure">Ranks 65–80 — Mechanical Structure</h2>
 <table>
 <thead>
 <tr>
@@ -1269,19 +1877,19 @@
 </tr>
 <tr>
 <td style="text-align: right;">70</td>
-<td>Parallel-link knee mechanism</td>
+<td>Parallel-link knee</td>
 </tr>
 <tr>
 <td style="text-align: right;">71</td>
-<td>Lightweight aluminum upper-leg link</td>
+<td>Aluminum upper-leg link</td>
 </tr>
 <tr>
 <td style="text-align: right;">72</td>
-<td>Lightweight aluminum lower-leg link</td>
+<td>Aluminum lower-leg link</td>
 </tr>
 <tr>
 <td style="text-align: right;">73</td>
-<td>Hollow structural members</td>
+<td>Hollow members</td>
 </tr>
 <tr>
 <td style="text-align: right;">74</td>
@@ -1289,7 +1897,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">75</td>
-<td>Heat-set threaded inserts</td>
+<td>Heat-set inserts</td>
 </tr>
 <tr>
 <td style="text-align: right;">76</td>
@@ -1305,15 +1913,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">79</td>
-<td>Topology-optimized leg link</td>
+<td>Topology-optimized link</td>
 </tr>
 <tr>
 <td style="text-align: right;">80</td>
-<td>Carbon-fiber link with printed fittings</td>
+<td>Carbon-fiber link</td>
 </tr>
 </tbody>
 </table>
-<h2 id="specialized-features">Specialized Features</h2>
+<h2 id="ranks-8190-specialized-features">Ranks 81–90 — Specialized Features</h2>
 <table>
 <thead>
 <tr>
@@ -1332,31 +1940,31 @@
 </tr>
 <tr>
 <td style="text-align: right;">83</td>
-<td>Damped foot mechanism</td>
+<td>Damped foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">84</td>
-<td>High-friction foot insert</td>
+<td>High-friction insert</td>
 </tr>
 <tr>
 <td style="text-align: right;">85</td>
-<td>Wide foot for soft terrain</td>
+<td>Wide terrain foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">86</td>
-<td>Rounded foot for uneven terrain</td>
+<td>Rounded terrain foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">87</td>
-<td>Toe-style obstacle-climbing tip</td>
+<td>Toe-style climbing tip</td>
 </tr>
 <tr>
 <td style="text-align: right;">88</td>
-<td>Anti-slip foot geometry</td>
+<td>Anti-slip geometry</td>
 </tr>
 <tr>
 <td style="text-align: right;">89</td>
-<td>Narrow foot for hard surfaces</td>
+<td>Narrow indoor foot</td>
 </tr>
 <tr>
 <td style="text-align: right;">90</td>
@@ -1364,7 +1972,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="experimental-lower-priority-features">Experimental / Lower Priority Features</h2>
+<h2 id="ranks-91100-experimental-features">Ranks 91–100 — Experimental Features</h2>
 <table>
 <thead>
 <tr>
@@ -1391,11 +1999,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">95</td>
-<td>Foldable leg configuration</td>
+<td>Foldable leg</td>
 </tr>
 <tr>
 <td style="text-align: right;">96</td>
-<td>Offset hip joint</td>
+<td>Offset hip</td>
 </tr>
 <tr>
 <td style="text-align: right;">97</td>
@@ -1403,68 +2011,160 @@
 </tr>
 <tr>
 <td style="text-align: right;">98</td>
-<td>Fiber-reinforced polymer structure</td>
+<td>Fiber-reinforced polymer</td>
 </tr>
 <tr>
 <td style="text-align: right;">99</td>
-<td>Joint spacing optimized for self-collision</td>
+<td>Self-collision optimized spacing</td>
 </tr>
 <tr>
 <td style="text-align: right;">100</td>
-<td>Leg geometry optimized around a predetermined walking arc</td>
+<td>Predetermined walking-arc geometry</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="ranked-brainstorm-snapshot">Ranked Brainstorm Snapshot</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/ranked-brainstorm.png" data-desc-position="bottom"><img alt="Ranked Brainstorm" src="images/ranked-brainstorm.png"></a></p>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
 <hr>
 <h1 id="product-concepts">Product Concepts</h1>
-<p>The highest-ranked and most compatible features were combined into three different robotic-leg concepts.</p>
+<p>The ranked features were recombined into three distinct design concepts.</p>
 <h2 id="concept-1-rotary-servo-actuated-leg">Concept 1 — Rotary Servo-Actuated Leg</h2>
-<p>The first concept uses rotary electric actuators directly at the main leg joints.</p>
-<h3 id="main-features">Main Features</h3>
-<ul>
-<li>Three-degree-of-freedom architecture</li>
-<li>High-torque hip and knee servos</li>
-<li>Absolute magnetic encoders</li>
-<li>Closed-loop position control</li>
-<li>Mechanical joint stops</li>
-<li>Ground-force sensing</li>
-<li>Interchangeable foot</li>
-<li>Modular structural components</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Design Area</th>
+<th>Selected Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architecture</strong></td>
+<td>Three-degree-of-freedom leg</td>
+</tr>
+<tr>
+<td><strong>Actuation</strong></td>
+<td>High-torque rotary servos</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Absolute magnetic encoders</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Closed-loop position control</td>
+</tr>
+<tr>
+<td><strong>Safety</strong></td>
+<td>Mechanical joint stops</td>
+</tr>
+<tr>
+<td><strong>Ground Detection</strong></td>
+<td>Load-cell sensing</td>
+</tr>
+<tr>
+<td><strong>Foot</strong></td>
+<td>Interchangeable foot</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Lightweight modular links</td>
+</tr>
+</tbody>
+</table>
+<p>This concept uses rotary actuators directly at the main joints and emphasizes accurate joint positioning and straightforward control.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/concept-1.png" data-desc-position="bottom"><img alt="Rotary Servo Concept" src="images/concept-1.png"></a></p>
 <hr>
 <h2 id="concept-2-electric-linear-actuator-leg">Concept 2 — Electric Linear-Actuator Leg</h2>
-<p>The second concept uses electric linear actuators connected to mechanical linkages to create joint movement.</p>
-<h3 id="main-features_1">Main Features</h3>
-<ul>
-<li>Electric linear actuators</li>
-<li>Four-bar or rocker linkage</li>
-<li>Adjustable actuator attachment points</li>
-<li>Position feedback</li>
-<li>Mechanical joint limits</li>
-<li>Ground-force sensing</li>
-<li>Modular actuator mounting</li>
-<li>Protected wiring</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Design Area</th>
+<th>Selected Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Architecture</strong></td>
+<td>Three-degree-of-freedom leg</td>
+</tr>
+<tr>
+<td><strong>Actuation</strong></td>
+<td>Electric linear actuators</td>
+</tr>
+<tr>
+<td><strong>Transmission</strong></td>
+<td>Four-bar / rocker linkage</td>
+</tr>
+<tr>
+<td><strong>Adjustment</strong></td>
+<td>Adjustable actuator mounting</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Position sensing</td>
+</tr>
+<tr>
+<td><strong>Safety</strong></td>
+<td>Mechanical joint limits</td>
+</tr>
+<tr>
+<td><strong>Ground Detection</strong></td>
+<td>Load-cell sensing</td>
+</tr>
+<tr>
+<td><strong>Maintenance</strong></td>
+<td>Modular actuator mounts</td>
+</tr>
+</tbody>
+</table>
+<p>This concept converts linear actuator extension and retraction into rotational joint movement through mechanical linkages.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/concept-2.png" data-desc-position="bottom"><img alt="Linear Actuator Concept" src="images/concept-2.png"></a></p>
 <hr>
 <h2 id="concept-3-linear-actuated-leg-with-gecko-end-effector">Concept 3 — Linear-Actuated Leg with Gecko End Effector</h2>
-<p>The third concept combines linear-actuator movement with a modular end-effector system.</p>
-<h3 id="main-features_2">Main Features</h3>
-<ul>
-<li>Linear actuator-based movement</li>
-<li>Mechanical linkage</li>
-<li>Position feedback</li>
-<li>Replaceable end-effector interface</li>
-<li>Gecko-inspired gripper</li>
-<li>Compliant foot mounting</li>
-<li>Force sensing</li>
-<li>Interchangeable standard foot</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Design Area</th>
+<th>Selected Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actuation</strong></td>
+<td>Electric linear actuators</td>
+</tr>
+<tr>
+<td><strong>Transmission</strong></td>
+<td>Mechanical linkage</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Position sensing</td>
+</tr>
+<tr>
+<td><strong>End Effector</strong></td>
+<td>Gecko-inspired gripper</td>
+</tr>
+<tr>
+<td><strong>Modularity</strong></td>
+<td>Replaceable end-effector interface</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Compliant foot mount</td>
+</tr>
+<tr>
+<td><strong>Ground Detection</strong></td>
+<td>Force sensing</td>
+</tr>
+<tr>
+<td><strong>Alternate Foot</strong></td>
+<td>Standard interchangeable foot</td>
+</tr>
+</tbody>
+</table>
+<p>This concept combines linear actuation with a modular gecko-inspired end effector for specialized surface interaction.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/concept-3.png" data-desc-position="bottom"><img alt="Gecko End Effector Concept" src="images/concept-3.png"></a></p>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
 <hr>
 <h1 id="concept-comparison">Concept Comparison</h1>
 <table>
@@ -1478,72 +2178,138 @@
 </thead>
 <tbody>
 <tr>
-<td>Rotary actuation</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td>Linear actuation</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr>
-<td>Position feedback</td>
+<td>3-DOF Architecture</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr>
-<td>Mechanical joint limits</td>
+<td>Rotary Servo Actuation</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td>Linear Actuation</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Position Feedback</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr>
-<td>Ground sensing</td>
+<td>Closed-Loop Control</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr>
-<td>Modular foot</td>
+<td>Mechanical Joint Protection</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr>
-<td>Gecko end effector</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td>Ground Sensing</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Modular Foot</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Mechanical Linkage</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Gecko End Effector</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
 <td style="text-align: center;">✓</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h1 id="selected-features-moving-forward">Selected Features Moving Forward</h1>
-<p>Several features were identified as useful across multiple concepts:</p>
-<ul>
-<li>Three-degree-of-freedom movement</li>
-<li>Position feedback</li>
-<li>Closed-loop control</li>
-<li>Mechanical joint limits</li>
-<li>Ground-contact sensing</li>
-<li>Modular actuator mounting</li>
-<li>Replaceable foot or end-effector interface</li>
-<li>Lightweight structural components</li>
-<li>Protected wiring</li>
-<li>Startup calibration</li>
-</ul>
-<p>These features will continue to be considered as the team evaluates the three concepts and moves toward a final leg design.</p>
+<p>The following features remained useful across multiple concepts and will continue to be considered during future design development.</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Selected Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movement</strong></td>
+<td>Three-degree-of-freedom architecture</td>
+</tr>
+<tr>
+<td><strong>Feedback</strong></td>
+<td>Joint-position sensing</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Closed-loop motion control</td>
+</tr>
+<tr>
+<td><strong>Safety</strong></td>
+<td>Mechanical joint limits</td>
+</tr>
+<tr>
+<td><strong>Ground Interaction</strong></td>
+<td>Contact or force sensing</td>
+</tr>
+<tr>
+<td><strong>Modularity</strong></td>
+<td>Replaceable actuator and foot systems</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Lightweight components</td>
+</tr>
+<tr>
+<td><strong>Wiring</strong></td>
+<td>Protected cable routing</td>
+</tr>
+<tr>
+<td><strong>Startup</strong></td>
+<td>Automatic calibration</td>
+</tr>
+<tr>
+<td><strong>Adaptability</strong></td>
+<td>Interchangeable end effectors</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h1 id="brainstorming-process">Brainstorming Process</h1>
-<p>A separate page documents how the brainstorming session was conducted, including team participation, meeting format, resources, grouping, and ranking.</p>
+<p>A separate page documents how the brainstorming session was conducted, including:</p>
+<ul>
+<li>Who participated</li>
+<li>How the team met</li>
+<li>How ideas were collected</li>
+<li>Which project requirements were used</li>
+<li>Additional resources used during ideation</li>
+<li>How the features were grouped</li>
+<li>How rankings were assigned</li>
+</ul>
 <p><a href="brainstorming-process.md">View the Brainstorming Process</a></p>
 <hr>
 <h1 id="design-ideation-video">Design Ideation Video</h1>
 <p><a href="PASTE-VIDEO-LINK-HERE">Watch the Design Ideation Video</a></p>
+<hr>
+<p><a href="#table-of-contents">Back to Table of Contents</a></p>
 
 
 
