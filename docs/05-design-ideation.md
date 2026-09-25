@@ -4,246 +4,339 @@ title: Ideation and Concept Generation
 
 # Ideation and Concept Generation
 
-## Overview
-
 The purpose of this design ideation phase was to explore a wide range of possible features for a modular robotic leg intended for a six-legged walking robot.
 
-Rather than selecting one design immediately, the team generated approximately 100 individual product features covering joint architecture, actuation, sensing, structural design, foot interaction, modularity, and control. These ideas were then grouped and ranked before being combined into three distinct product concepts.
+Rather than selecting one design immediately, the team generated approximately 100 individual product features covering joint architecture, actuation, sensing, structural design, foot interaction, modularity, and control. These ideas were grouped, ranked, and combined into three distinct product concepts.
+
+---
+
+## Table of Contents
+
+1. [Project Focus](#project-focus)
+2. [Initial Brainstorm](#initial-brainstorm)
+   - [Joint Architecture and Kinematics](#joint-architecture-and-kinematics)
+   - [Rotary and Linear Actuation](#rotary-and-linear-actuation)
+   - [Actuator Mounting and Force Transmission](#actuator-mounting-and-force-transmission)
+   - [Position and Motion Feedback](#position-and-motion-feedback)
+   - [Foot and Ground Contact](#foot-and-ground-contact)
+   - [Gecko Gripper and End-Effector Concepts](#gecko-gripper-and-end-effector-concepts)
+   - [Structural Design](#structural-design)
+   - [Wiring, Safety, and Control](#wiring-safety-and-control)
+3. [Grouping and Ranking](#grouping-and-ranking)
+4. [Top Ranked Features](#top-ranked-features)
+5. [Complete Feature Ranking](#complete-feature-ranking)
+6. [Product Concepts](#product-concepts)
+   - [Concept 1: Rotary Servo-Actuated Leg](#concept-1--rotary-servo-actuated-leg)
+   - [Concept 2: Electric Linear-Actuator Leg](#concept-2--electric-linear-actuator-leg)
+   - [Concept 3: Linear-Actuated Leg with Gecko End Effector](#concept-3--linear-actuated-leg-with-gecko-end-effector)
+7. [Concept Comparison](#concept-comparison)
+8. [Selected Features Moving Forward](#selected-features-moving-forward)
+9. [Brainstorming Process](#brainstorming-process)
+10. [Design Ideation Video](#design-ideation-video)
+
+---
+
+# Project Focus
+
+| Design Area | What We Explored |
+|---|---|
+| **Movement** | Joint geometry, degrees of freedom, and walking range |
+| **Actuation** | Servo motors, rotary motors, and linear actuators |
+| **Feedback** | Encoders, potentiometers, IMUs, and contact sensors |
+| **Ground Interaction** | Foot shape, traction, force sensing, and compliance |
+| **Modularity** | Replaceable actuators, links, feet, and end effectors |
+| **Structure** | Lightweight and manufacturable leg components |
+| **Safety** | Joint limits, stall detection, calibration, and fault handling |
 
 ---
 
 # Initial Brainstorm
 
-The brainstorm focused on generating individual features that could later be combined into complete robotic-leg designs.
+The initial brainstorm focused on individual product features rather than complete designs. This allowed the team to generate a large design space before deciding which ideas should be combined.
 
 ## Joint Architecture and Kinematics
 
-1. Three-degree-of-freedom leg with hip yaw, hip pitch, and knee pitch
-2. Two-degree-of-freedom leg for simpler control
-3. Offset hip joint to increase lateral workspace
-4. Four-bar linkage to control foot motion
-5. Parallel-link knee mechanism for improved load support
-6. Mechanical linkage that keeps the foot approximately level
-7. Adjustable upper-leg link length
-8. Adjustable lower-leg link length
-9. Interchangeable link geometry for different stride lengths
-10. Mechanical joint stops to prevent over-rotation
-11. Adjustable joint-angle limits
-12. Foldable leg configuration for compact storage
-13. Joint geometry designed to maximize useful workspace
-14. Joint spacing designed to reduce self-collision
-15. Leg geometry designed around a repeatable walking arc
+| # | Feature | Purpose |
+|---:|---|---|
+| 1 | Three-degree-of-freedom leg | Provides hip yaw, hip pitch, and knee pitch |
+| 2 | Two-degree-of-freedom leg | Simplifies mechanical and control requirements |
+| 3 | Offset hip joint | Increases lateral workspace |
+| 4 | Four-bar linkage | Controls foot motion mechanically |
+| 5 | Parallel-link knee mechanism | Improves load support |
+| 6 | Foot-leveling linkage | Helps keep the foot approximately level |
+| 7 | Adjustable upper-leg link | Allows leg geometry to be modified |
+| 8 | Adjustable lower-leg link | Allows leg geometry to be modified |
+| 9 | Interchangeable link geometry | Supports different stride configurations |
+| 10 | Mechanical joint stops | Prevents excessive joint rotation |
+| 11 | Adjustable joint-angle limits | Allows range of motion to be changed |
+| 12 | Foldable leg configuration | Allows more compact storage |
+| 13 | Workspace-optimized joint geometry | Maximizes useful movement |
+| 14 | Self-collision optimized spacing | Reduces interference between components |
+| 15 | Repeatable walking-arc geometry | Supports consistent walking motion |
 
-## Rotary and Linear Actuation
-
-16. High-torque digital servo at the hip
-17. High-torque digital servo at the knee
-18. Compact servo at the distal joint
-19. Brushless motor with planetary gearbox
-20. Geared DC motor with encoder feedback
-21. Stepper motor for precise joint positioning
-22. Worm-drive actuator for high holding torque
-23. Belt-reduction transmission
-24. Cable-driven joint
-25. Electric linear actuator
-26. Electric linear actuator driving a four-bar linkage
-27. Electric linear actuator with built-in position feedback
-28. Lead-screw actuator
-29. Pneumatic linear actuator
-30. Double-acting pneumatic cylinder
-31. Pneumatic cylinder with adjustable flow control
-32. Hydraulic linear actuator
-33. Hydraulic cylinder with pressure sensing
-34. Spring-assisted actuator
-35. Series-elastic actuator
-
-## Actuator Mounting and Force Transmission
-
-36. Quick-release actuator mounting bracket
-37. Modular actuator cartridge
-38. Clevis-mounted linear actuator
-39. Rocker linkage
-40. Bell-crank mechanism
-41. Adjustable actuator attachment point
-42. Pushrod linkage
-43. Dual-actuator joint
-44. Counterbalance spring at the hip
-45. Mechanical leverage system to reduce actuator force requirements
-
-## Position and Motion Feedback
-
-46. Absolute magnetic encoder at the hip
-47. Absolute magnetic encoder at the knee
-48. Incremental encoder with startup homing
-49. Potentiometer-based joint-angle sensing
-50. Hall-effect joint-angle sensing
-51. Linear potentiometer for actuator extension
-52. Encoder mounted directly on the joint output shaft
-53. Joint velocity calculated from encoder data
-54. IMU mounted on the upper leg
-55. IMU mounted near the foot
-56. Home-position sensor
-57. End-of-travel sensor
-58. Slip detection using commanded and measured position
-59. Backlash estimation using position feedback
-60. Sensor fusion between encoder and IMU data
-
-## Foot and Ground Contact
-
-61. Force-sensitive resistor in the foot
-62. Load cell for measuring ground reaction force
-63. Multiple force sensors across the foot
-64. Contact switch for ground detection
-65. Compliant rubber foot pad
-66. Replaceable high-friction foot insert
-67. Rounded foot for uneven surfaces
-68. Wide foot for soft terrain
-69. Narrow foot for hard indoor surfaces
-70. Articulated foot
-71. Spring-loaded foot
-72. Damped foot mechanism
-73. Interchangeable foot designs
-74. Toe-style obstacle-climbing tip
-75. Foot geometry designed to reduce slipping
-
-## Gecko Gripper and End-Effector Concepts
-
-76. Gecko-inspired adhesive foot
-77. Gecko gripper end effector
-78. Interchangeable gecko foot module
-79. Passive gecko adhesive pad
-80. Actively engaged gecko gripper
-81. Directional gecko adhesive surface
-82. Compliant gecko foot mount
-83. Gecko pad with integrated force sensing
-84. Hybrid rubber and gecko adhesive foot
-85. Replaceable end-effector interface
-
-## Structural Design
-
-86. Lightweight aluminum upper-leg link
-87. Lightweight aluminum lower-leg link
-88. Carbon-fiber link with printed fittings
-89. Reinforced 3D-printed nylon link
-90. Fiber-reinforced polymer structure
-91. Hollow structural members
-92. Ribbed printed geometry
-93. Topology-optimized leg link
-94. Removable side plates
-95. Heat-set threaded inserts
-
-## Wiring, Safety, and Control
-
-96. Internal cable routing through the leg
-97. Strain relief near moving joints
-98. Motor-current sensing for stall detection
-99. Automatic startup calibration
-100. Closed-loop position control with an emergency fault state
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
-## Initial Brainstorm Snapshot
+## Rotary and Linear Actuation
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 16 | High-torque hip servo | Provides powered hip movement |
+| 17 | High-torque knee servo | Provides lifting and support |
+| 18 | Compact distal servo | Reduces weight farther down the leg |
+| 19 | Brushless motor with planetary gearbox | Provides efficient high-torque movement |
+| 20 | Geared DC motor with encoder | Combines torque with position feedback |
+| 21 | Stepper motor | Provides controlled incremental movement |
+| 22 | Worm-drive actuator | Provides high holding torque |
+| 23 | Belt-reduction transmission | Moves motor mass closer to the body |
+| 24 | Cable-driven joint | Reduces distal actuator weight |
+| 25 | Electric linear actuator | Produces controlled linear movement |
+| 26 | Linear actuator with four-bar linkage | Converts linear movement into joint rotation |
+| 27 | Linear actuator with position feedback | Measures actuator extension |
+| 28 | Lead-screw actuator | Provides controlled linear movement |
+| 29 | Pneumatic linear actuator | Produces rapid extension and retraction |
+| 30 | Double-acting pneumatic cylinder | Provides powered motion in both directions |
+| 31 | Pneumatic actuator with flow control | Allows speed adjustment |
+| 32 | Hydraulic linear actuator | Produces high-force movement |
+| 33 | Hydraulic actuator with pressure sensing | Adds force-related feedback |
+| 34 | Spring-assisted actuator | Reduces required motor load |
+| 35 | Series-elastic actuator | Adds compliance and impact absorption |
+
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+## Actuator Mounting and Force Transmission
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 36 | Quick-release actuator bracket | Simplifies actuator replacement |
+| 37 | Modular actuator cartridge | Allows the actuator assembly to be replaced separately |
+| 38 | Clevis-mounted linear actuator | Provides pivoting actuator attachment |
+| 39 | Rocker linkage | Converts actuator movement into joint rotation |
+| 40 | Bell-crank mechanism | Changes force direction |
+| 41 | Adjustable actuator attachment point | Changes mechanical advantage |
+| 42 | Pushrod linkage | Transfers actuator force |
+| 43 | Dual-actuator joint | Increases available load capacity |
+| 44 | Hip counterbalance spring | Reduces actuator load |
+| 45 | Mechanical leverage system | Reduces required actuator force |
+
+---
+
+## Position and Motion Feedback
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 46 | Absolute magnetic hip encoder | Measures hip position |
+| 47 | Absolute magnetic knee encoder | Measures knee position |
+| 48 | Incremental encoder with homing | Tracks movement after calibration |
+| 49 | Potentiometer joint sensing | Measures joint angle |
+| 50 | Hall-effect joint sensing | Provides contactless angle sensing |
+| 51 | Linear potentiometer | Measures actuator extension |
+| 52 | Joint-output encoder | Measures actual joint position |
+| 53 | Calculated joint velocity | Determines movement speed from encoder data |
+| 54 | Upper-leg IMU | Measures orientation and motion |
+| 55 | Foot-mounted IMU | Measures motion near the ground |
+| 56 | Home-position sensor | Establishes a known reference position |
+| 57 | End-of-travel sensor | Detects joint or actuator limits |
+| 58 | Slip detection | Compares commanded and actual movement |
+| 59 | Backlash estimation | Detects mechanical play |
+| 60 | Encoder/IMU sensor fusion | Combines multiple feedback sources |
+
+---
+
+## Foot and Ground Contact
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 61 | Force-sensitive resistor | Detects foot contact |
+| 62 | Load cell | Measures ground reaction force |
+| 63 | Multiple foot force sensors | Measures force distribution |
+| 64 | Contact switch | Provides basic ground detection |
+| 65 | Compliant rubber foot | Improves grip and compliance |
+| 66 | High-friction foot insert | Improves traction |
+| 67 | Rounded foot | Improves contact on uneven surfaces |
+| 68 | Wide foot | Supports soft terrain |
+| 69 | Narrow foot | Supports hard indoor surfaces |
+| 70 | Articulated foot | Passively adjusts to terrain |
+| 71 | Spring-loaded foot | Absorbs impacts |
+| 72 | Damped foot | Reduces bounce |
+| 73 | Interchangeable feet | Allows terrain-specific configurations |
+| 74 | Toe-style climbing tip | Assists with obstacles |
+| 75 | Anti-slip foot geometry | Improves stance stability |
+
+---
+
+## Gecko Gripper and End-Effector Concepts
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 76 | Gecko-inspired adhesive foot | Provides additional surface attachment |
+| 77 | Gecko gripper end effector | Allows specialized gripping |
+| 78 | Interchangeable gecko module | Preserves modularity |
+| 79 | Passive gecko adhesive pad | Adds attachment without active control |
+| 80 | Active gecko gripper | Allows controlled engagement |
+| 81 | Directional gecko surface | Provides directional adhesion |
+| 82 | Compliant gecko mount | Improves surface contact |
+| 83 | Gecko pad with force sensing | Combines gripping and feedback |
+| 84 | Hybrid rubber/gecko foot | Combines traction and adhesion |
+| 85 | Replaceable end-effector interface | Allows multiple foot attachments |
+
+---
+
+## Structural Design
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 86 | Aluminum upper-leg link | Provides lightweight structural support |
+| 87 | Aluminum lower-leg link | Provides lightweight structural support |
+| 88 | Carbon-fiber link with printed fittings | Reduces weight |
+| 89 | Reinforced 3D-printed nylon link | Balances cost and strength |
+| 90 | Fiber-reinforced polymer | Provides lightweight structural support |
+| 91 | Hollow structural members | Reduces mass |
+| 92 | Ribbed printed geometry | Improves stiffness |
+| 93 | Topology-optimized link | Removes unnecessary material |
+| 94 | Removable side plates | Improves maintenance access |
+| 95 | Heat-set threaded inserts | Strengthens reusable fastener locations |
+
+---
+
+## Wiring, Safety, and Control
+
+| # | Feature | Purpose |
+|---:|---|---|
+| 96 | Internal cable routing | Protects wiring |
+| 97 | Strain relief | Protects wires near moving joints |
+| 98 | Motor-current sensing | Detects stalls and overloads |
+| 99 | Automatic startup calibration | Establishes known starting positions |
+| 100 | Closed-loop control with fault state | Controls motion and handles faults |
+
+---
+
+# Brainstorm Snapshot
+
+The image below shows the brainstorm before the features were finalized into product concepts.
 
 ![Initial Brainstorm](images/initial-brainstorm.png)
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
 # Grouping and Ranking
 
-After the initial brainstorm, the ideas were grouped according to their primary function. This allowed the team to compare related features and identify which ideas could be combined into complete product concepts.
+After the initial brainstorm, related features were grouped according to their primary purpose.
 
-The features were ranked based on their importance to the operation, control, safety, modularity, and adaptability of the robotic leg.
+| Group | Main Question |
+|---|---|
+| **Joint Architecture** | How should the leg move? |
+| **Actuation** | What should create the movement? |
+| **Force Transmission** | How should actuator force reach the joints? |
+| **Feedback** | How will the robot know where the leg is? |
+| **Ground Contact** | How will the foot interact with the surface? |
+| **End Effectors** | What specialized attachments could be used? |
+| **Structure** | How can the leg remain strong and lightweight? |
+| **Control & Safety** | How will motion remain controlled and protected? |
 
-## Highest Priority — Core Features
+The team then ranked the features based on their importance to basic leg operation and their usefulness in future concept development.
 
-| Rank | Feature |
-|---:|---|
-| 1 | Three-degree-of-freedom leg with hip yaw, hip pitch, and knee pitch |
-| 2 | High-torque digital servo at the hip |
-| 3 | High-torque digital servo at the knee |
-| 4 | Absolute magnetic encoder at the hip |
-| 5 | Absolute magnetic encoder at the knee |
-| 6 | Closed-loop position control with emergency fault state |
-| 7 | Mechanical joint stops |
-| 8 | Load cell for measuring ground reaction force |
-| 9 | Interchangeable foot designs |
-| 10 | Modular actuator cartridge |
-| 11 | Joint geometry designed to maximize useful workspace |
-| 12 | Motor-current sensing for stall detection |
-| 13 | Reinforced 3D-printed nylon structure |
-| 14 | Automatic startup calibration |
-| 15 | Adjustable actuator attachment point |
+---
 
-## Very Strong Features
+# Top Ranked Features
+
+| Rank | Feature | Why It Ranked Highly |
+|---:|---|---|
+| **1** | Three-degree-of-freedom leg | Provides useful spider-like motion |
+| **2** | High-torque hip servo | Supports a significant portion of the leg load |
+| **3** | High-torque knee servo | Provides lifting and stance support |
+| **4** | Absolute magnetic hip encoder | Provides reliable hip-position feedback |
+| **5** | Absolute magnetic knee encoder | Provides reliable knee-position feedback |
+| **6** | Closed-loop position control | Improves movement accuracy and safety |
+| **7** | Mechanical joint stops | Protects the mechanism |
+| **8** | Ground-force load cell | Determines whether the foot is supporting weight |
+| **9** | Interchangeable foot design | Supports multiple surfaces and experiments |
+| **10** | Modular actuator cartridge | Simplifies testing and repair |
+| **11** | Workspace-optimized geometry | Improves useful movement |
+| **12** | Motor-current sensing | Detects stalls and jams |
+| **13** | Reinforced printed structure | Balances strength, cost, and manufacturing |
+| **14** | Startup calibration | Creates a known starting position |
+| **15** | Adjustable actuator attachment | Allows torque/speed tradeoffs to be tested |
+
+---
+
+# Complete Feature Ranking
+
+## Ranks 16–30 — Very Strong Features
 
 | Rank | Feature |
 |---:|---|
 | 16 | Electric linear actuator |
-| 17 | Electric linear actuator with position feedback |
-| 18 | Electric linear actuator driving a four-bar linkage |
+| 17 | Linear actuator with position feedback |
+| 18 | Linear actuator with four-bar linkage |
 | 19 | Four-bar linkage |
 | 20 | Adjustable joint-angle limits |
-| 21 | Encoder mounted directly on the joint output shaft |
+| 21 | Joint-output encoder |
 | 22 | Home-position sensor |
-| 23 | Quick-release actuator mounting bracket |
+| 23 | Quick-release actuator bracket |
 | 24 | Low-friction joint support |
-| 25 | Adjustable upper-leg link length |
-| 26 | Adjustable lower-leg link length |
-| 27 | Compliant rubber foot pad |
-| 28 | Strain relief near moving joints |
+| 25 | Adjustable upper-leg link |
+| 26 | Adjustable lower-leg link |
+| 27 | Compliant rubber foot |
+| 28 | Strain relief |
 | 29 | Internal cable routing |
 | 30 | Spring-assisted actuator |
 
-## Alternative Actuation Concepts
+## Ranks 31–40 — Alternative Actuation
 
 | Rank | Feature |
 |---:|---|
 | 31 | Pneumatic linear actuator |
 | 32 | Double-acting pneumatic cylinder |
-| 33 | Pneumatic cylinder with adjustable flow control |
+| 33 | Pneumatic flow control |
 | 34 | Hydraulic linear actuator |
-| 35 | Hydraulic cylinder with pressure sensing |
-| 36 | Geared DC motor with encoder feedback |
+| 35 | Hydraulic pressure sensing |
+| 36 | Geared DC motor with encoder |
 | 37 | Brushless motor with planetary gearbox |
 | 38 | Worm-drive actuator |
 | 39 | Lead-screw actuator |
 | 40 | Series-elastic actuator |
 
-## Sensor and Feedback Features
+## Ranks 41–54 — Sensors and Feedback
 
 | Rank | Feature |
 |---:|---|
-| 41 | Hall-effect joint-angle sensing |
-| 42 | Linear potentiometer for actuator extension |
-| 43 | Potentiometer-based joint-angle sensing |
+| 41 | Hall-effect joint sensing |
+| 42 | Linear potentiometer |
+| 43 | Rotary potentiometer |
 | 44 | Upper-leg IMU |
-| 45 | Foot-mounted IMU |
+| 45 | Foot IMU |
 | 46 | Force-sensitive resistor |
-| 47 | Multiple force sensors across the foot |
+| 47 | Multiple foot force sensors |
 | 48 | End-of-travel sensor |
 | 49 | Slip detection |
-| 50 | Encoder and IMU sensor fusion |
+| 50 | Sensor fusion |
 | 51 | Joint velocity calculation |
 | 52 | Backlash estimation |
-| 53 | Contact switch |
-| 54 | Incremental encoder with homing |
+| 53 | Ground-contact switch |
+| 54 | Incremental encoder |
 
-## Gecko Gripper and End-Effector Features
+## Ranks 55–64 — Gecko / End Effector
 
 | Rank | Feature |
 |---:|---|
-| 55 | Interchangeable gecko foot module |
-| 56 | Gecko gripper end effector |
+| 55 | Interchangeable gecko module |
+| 56 | Gecko gripper |
 | 57 | Gecko-inspired adhesive foot |
-| 58 | Compliant gecko foot mount |
-| 59 | Gecko pad with integrated force sensing |
+| 58 | Compliant gecko mount |
+| 59 | Gecko pad with force sensing |
 | 60 | Replaceable end-effector interface |
-| 61 | Hybrid rubber and gecko adhesive foot |
-| 62 | Actively engaged gecko gripper |
-| 63 | Directional gecko adhesive surface |
-| 64 | Passive gecko adhesive pad |
+| 61 | Hybrid rubber/gecko foot |
+| 62 | Active gecko gripper |
+| 63 | Directional gecko surface |
+| 64 | Passive gecko pad |
 
-## Mechanical Structure and Transmission
+## Ranks 65–80 — Mechanical Structure
 
 | Rank | Feature |
 |---:|---|
@@ -252,34 +345,34 @@ The features were ranked based on their importance to the operation, control, sa
 | 67 | Pushrod linkage |
 | 68 | Mechanical leverage system |
 | 69 | Counterbalance spring |
-| 70 | Parallel-link knee mechanism |
-| 71 | Lightweight aluminum upper-leg link |
-| 72 | Lightweight aluminum lower-leg link |
-| 73 | Hollow structural members |
+| 70 | Parallel-link knee |
+| 71 | Aluminum upper-leg link |
+| 72 | Aluminum lower-leg link |
+| 73 | Hollow members |
 | 74 | Ribbed printed structure |
-| 75 | Heat-set threaded inserts |
+| 75 | Heat-set inserts |
 | 76 | Removable side plates |
 | 77 | Interchangeable link geometry |
 | 78 | Structural guards |
-| 79 | Topology-optimized leg link |
-| 80 | Carbon-fiber link with printed fittings |
+| 79 | Topology-optimized link |
+| 80 | Carbon-fiber link |
 
-## Specialized Features
+## Ranks 81–90 — Specialized Features
 
 | Rank | Feature |
 |---:|---|
 | 81 | Articulated foot |
 | 82 | Spring-loaded foot |
-| 83 | Damped foot mechanism |
-| 84 | High-friction foot insert |
-| 85 | Wide foot for soft terrain |
-| 86 | Rounded foot for uneven terrain |
-| 87 | Toe-style obstacle-climbing tip |
-| 88 | Anti-slip foot geometry |
-| 89 | Narrow foot for hard surfaces |
+| 83 | Damped foot |
+| 84 | High-friction insert |
+| 85 | Wide terrain foot |
+| 86 | Rounded terrain foot |
+| 87 | Toe-style climbing tip |
+| 88 | Anti-slip geometry |
+| 89 | Narrow indoor foot |
 | 90 | Compact distal servo |
 
-## Experimental / Lower Priority Features
+## Ranks 91–100 — Experimental Features
 
 | Rank | Feature |
 |---:|---|
@@ -287,39 +380,35 @@ The features were ranked based on their importance to the operation, control, sa
 | 92 | Belt-reduction transmission |
 | 93 | Dual-actuator joint |
 | 94 | Two-degree-of-freedom leg |
-| 95 | Foldable leg configuration |
-| 96 | Offset hip joint |
+| 95 | Foldable leg |
+| 96 | Offset hip |
 | 97 | Foot-leveling linkage |
-| 98 | Fiber-reinforced polymer structure |
-| 99 | Joint spacing optimized for self-collision |
-| 100 | Leg geometry optimized around a predetermined walking arc |
+| 98 | Fiber-reinforced polymer |
+| 99 | Self-collision optimized spacing |
+| 100 | Predetermined walking-arc geometry |
 
----
-
-## Ranked Brainstorm Snapshot
-
-![Ranked Brainstorm](images/ranked-brainstorm.png)
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
 # Product Concepts
 
-The highest-ranked and most compatible features were combined into three different robotic-leg concepts.
+The ranked features were recombined into three distinct design concepts.
 
 ## Concept 1 — Rotary Servo-Actuated Leg
 
-The first concept uses rotary electric actuators directly at the main leg joints.
+| Design Area | Selected Feature |
+|---|---|
+| **Architecture** | Three-degree-of-freedom leg |
+| **Actuation** | High-torque rotary servos |
+| **Feedback** | Absolute magnetic encoders |
+| **Control** | Closed-loop position control |
+| **Safety** | Mechanical joint stops |
+| **Ground Detection** | Load-cell sensing |
+| **Foot** | Interchangeable foot |
+| **Structure** | Lightweight modular links |
 
-### Main Features
-
-- Three-degree-of-freedom architecture
-- High-torque hip and knee servos
-- Absolute magnetic encoders
-- Closed-loop position control
-- Mechanical joint stops
-- Ground-force sensing
-- Interchangeable foot
-- Modular structural components
+This concept uses rotary actuators directly at the main joints and emphasizes accurate joint positioning and straightforward control.
 
 ![Rotary Servo Concept](images/concept-1.png)
 
@@ -327,18 +416,18 @@ The first concept uses rotary electric actuators directly at the main leg joints
 
 ## Concept 2 — Electric Linear-Actuator Leg
 
-The second concept uses electric linear actuators connected to mechanical linkages to create joint movement.
+| Design Area | Selected Feature |
+|---|---|
+| **Architecture** | Three-degree-of-freedom leg |
+| **Actuation** | Electric linear actuators |
+| **Transmission** | Four-bar / rocker linkage |
+| **Adjustment** | Adjustable actuator mounting |
+| **Feedback** | Position sensing |
+| **Safety** | Mechanical joint limits |
+| **Ground Detection** | Load-cell sensing |
+| **Maintenance** | Modular actuator mounts |
 
-### Main Features
-
-- Electric linear actuators
-- Four-bar or rocker linkage
-- Adjustable actuator attachment points
-- Position feedback
-- Mechanical joint limits
-- Ground-force sensing
-- Modular actuator mounting
-- Protected wiring
+This concept converts linear actuator extension and retraction into rotational joint movement through mechanical linkages.
 
 ![Linear Actuator Concept](images/concept-2.png)
 
@@ -346,20 +435,22 @@ The second concept uses electric linear actuators connected to mechanical linkag
 
 ## Concept 3 — Linear-Actuated Leg with Gecko End Effector
 
-The third concept combines linear-actuator movement with a modular end-effector system.
+| Design Area | Selected Feature |
+|---|---|
+| **Actuation** | Electric linear actuators |
+| **Transmission** | Mechanical linkage |
+| **Feedback** | Position sensing |
+| **End Effector** | Gecko-inspired gripper |
+| **Modularity** | Replaceable end-effector interface |
+| **Compliance** | Compliant foot mount |
+| **Ground Detection** | Force sensing |
+| **Alternate Foot** | Standard interchangeable foot |
 
-### Main Features
-
-- Linear actuator-based movement
-- Mechanical linkage
-- Position feedback
-- Replaceable end-effector interface
-- Gecko-inspired gripper
-- Compliant foot mounting
-- Force sensing
-- Interchangeable standard foot
+This concept combines linear actuation with a modular gecko-inspired end effector for specialized surface interaction.
 
 ![Gecko End Effector Concept](images/concept-3.png)
+
+[Back to Table of Contents](#table-of-contents)
 
 ---
 
@@ -367,38 +458,49 @@ The third concept combines linear-actuator movement with a modular end-effector 
 
 | Feature | Concept 1 | Concept 2 | Concept 3 |
 |---|:---:|:---:|:---:|
-| Rotary actuation | ✓ |  |  |
-| Linear actuation |  | ✓ | ✓ |
-| Position feedback | ✓ | ✓ | ✓ |
-| Mechanical joint limits | ✓ | ✓ | ✓ |
-| Ground sensing | ✓ | ✓ | ✓ |
-| Modular foot | ✓ | ✓ | ✓ |
-| Gecko end effector |  |  | ✓ |
+| 3-DOF Architecture | ✓ | ✓ | ✓ |
+| Rotary Servo Actuation | ✓ | — | — |
+| Linear Actuation | — | ✓ | ✓ |
+| Position Feedback | ✓ | ✓ | ✓ |
+| Closed-Loop Control | ✓ | ✓ | ✓ |
+| Mechanical Joint Protection | ✓ | ✓ | ✓ |
+| Ground Sensing | ✓ | ✓ | ✓ |
+| Modular Foot | ✓ | ✓ | ✓ |
+| Mechanical Linkage | — | ✓ | ✓ |
+| Gecko End Effector | — | — | ✓ |
 
 ---
 
 # Selected Features Moving Forward
 
-Several features were identified as useful across multiple concepts:
+The following features remained useful across multiple concepts and will continue to be considered during future design development.
 
-- Three-degree-of-freedom movement
-- Position feedback
-- Closed-loop control
-- Mechanical joint limits
-- Ground-contact sensing
-- Modular actuator mounting
-- Replaceable foot or end-effector interface
-- Lightweight structural components
-- Protected wiring
-- Startup calibration
-
-These features will continue to be considered as the team evaluates the three concepts and moves toward a final leg design.
+| Area | Selected Direction |
+|---|---|
+| **Movement** | Three-degree-of-freedom architecture |
+| **Feedback** | Joint-position sensing |
+| **Control** | Closed-loop motion control |
+| **Safety** | Mechanical joint limits |
+| **Ground Interaction** | Contact or force sensing |
+| **Modularity** | Replaceable actuator and foot systems |
+| **Structure** | Lightweight components |
+| **Wiring** | Protected cable routing |
+| **Startup** | Automatic calibration |
+| **Adaptability** | Interchangeable end effectors |
 
 ---
 
 # Brainstorming Process
 
-A separate page documents how the brainstorming session was conducted, including team participation, meeting format, resources, grouping, and ranking.
+A separate page documents how the brainstorming session was conducted, including:
+
+- Who participated
+- How the team met
+- How ideas were collected
+- Which project requirements were used
+- Additional resources used during ideation
+- How the features were grouped
+- How rankings were assigned
 
 [View the Brainstorming Process](brainstorming-process.md)
 
@@ -407,3 +509,7 @@ A separate page documents how the brainstorming session was conducted, including
 # Design Ideation Video
 
 [Watch the Design Ideation Video](PASTE-VIDEO-LINK-HERE)
+
+---
+
+[Back to Table of Contents](#table-of-contents)
