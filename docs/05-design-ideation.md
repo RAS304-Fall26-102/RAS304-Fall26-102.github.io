@@ -410,7 +410,7 @@ The ranked features were recombined into three distinct design concepts.
 
 This concept uses rotary actuators directly at the main joints and emphasizes accurate joint positioning and straightforward control.
 
-![Rotary Servo Concept](images/concept-1.png)
+![Rotary Servo Concept](image/Concept1_Leg-1.png)
 
 ---
 
@@ -429,7 +429,7 @@ This concept uses rotary actuators directly at the main joints and emphasizes ac
 
 This concept converts linear actuator extension and retraction into rotational joint movement through mechanical linkages.
 
-![Linear Actuator Concept](images/concept-2.png)
+![Linear Actuator Concept](image/Concept2_Leg-1.png)
 
 ---
 
@@ -448,7 +448,7 @@ This concept converts linear actuator extension and retraction into rotational j
 
 This concept combines linear actuation with a modular gecko-inspired end effector for specialized surface interaction.
 
-![Gecko End Effector Concept](images/concept-3.png)
+![Gecko End Effector Concept](image/Concept3_Leg-1.png)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -506,9 +506,6 @@ A separate page documents how the brainstorming session was conducted, including
 
 ---
 
-# Design Ideation Video
-
-[Watch the Design Ideation Video](PASTE-VIDEO-LINK-HERE)
 
 ---
 
