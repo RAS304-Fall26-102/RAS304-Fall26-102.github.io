@@ -1,8 +1,3 @@
----
-title: Software Proposal
-hide:
-  - toc
----
 
 # Software Proposal
 
