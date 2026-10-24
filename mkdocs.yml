@@ -1,6 +1,6 @@
 
 site_name: RAS304 | Team 102
-site_url: https://RAS304-Fall26-102.github.io/
+site_url: https://ras304-fall26-102.github.io/
 repo_url: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.io
 edit_uri: edit/main/docs/
 
@@ -31,6 +31,16 @@ theme:
     - toc.follow
     - content.action.edit
     - content.code.copy
+
+nav:
+  - Home: index.md
+  - Team Organization: 02-Team-Organization.md
+  - User Needs and Benchmarking: 03-User-Needs-and-Benchmarking.md
+  - Product Requirements: 04-Product-Requirements.md
+  - Design Ideation: 05-design-ideation.md
+  - Team Block Diagram: 06-team-block-diagram.md
+  - Software Proposal: "07-Software Proposal.md"
+  - Brainstorming Process: brainstorming-process.md
 
 markdown_extensions:
   - attr_list
@@ -72,14 +82,3 @@ extra:
     - icon: fontawesome/regular/file-code
       link: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.io
       name: Team 102 GitHub Repository
-
-
-nav:
-  - Home: index.md
-  - Team Organization: 02-Team-Organization.md
-  - User Needs and Benchmarking: 03-User-Needs-and-Benchmarking.md
-  - Product Requirements: 04-Product-Requirements.md
-  - Design Ideation: 05-design-ideation.md
-  - Team Block Diagram: 06-team-block-diagram.md
-  - Software Proposal: 07-Software-Proposal.md
-  - Brainstorming Process: brainstorming-process.md

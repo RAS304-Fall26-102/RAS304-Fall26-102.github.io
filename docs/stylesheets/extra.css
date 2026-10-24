@@ -1,12 +1,64 @@
-article{
-    a {
-        font-style:italic;
-        }
+
+/* TEAM 102 GREEN AND GOLD THEME */
+
+:root {
+  --md-primary-fg-color: #174D36;
+  --md-primary-fg-color--light: #286C4E;
+  --md-primary-fg-color--dark: #103824;
+  --md-accent-fg-color: #D5AC45;
+  --md-typeset-a-color: #176A49;
 }
 
-blockquote{
-    background: #ffc;
-    p,li{
-        color: var(--md-typeset-color);
-    }
+/* HEADER AND NAVIGATION */
+.md-header,
+.md-tabs {
+  background-color: #174D36;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: #F3C75B;
+}
+
+/* WIDER PAGE LAYOUT */
+.md-grid {
+  max-width: 1500px;
+}
+
+/* HEADINGS */
+.md-typeset h1 {
+  color: #174D36;
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  color: #174D36;
+  border-bottom: 2px solid #D5AC45;
+  padding-bottom: 8px;
+}
+
+.md-typeset h3 {
+  color: #286C4E;
+}
+
+/* TABLES */
+.md-typeset table:not([class]) th {
+  background-color: #174D36;
+  color: white;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: #F4F8F3;
+}
+
+/* IMAGES */
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.md-footer {
+  background-color: #103824;
 }
