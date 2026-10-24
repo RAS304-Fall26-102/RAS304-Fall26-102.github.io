@@ -76,7 +76,7 @@ Each driver Nano controls its assigned hardware and returns feedback to the main
 | Controller | Teammate | Responsibilities |
 |---|---|---|
 | Main Processor Nano | Preston Potts | Kinematics, IR remote, movement coordination, and global status |
-| Driver Nano 1 | Akshan Bhelkar | Servo motor and proposed diagnostic display |
+| Driver Nano 1 | Akshan Bhelkar | Servo motor and diagnostic display |
 | Driver Nano 2 | Bex Baker | Linear Actuator A and pressure sensor |
 | Driver Nano 3 | Kaushik Gunasekaren | Linear Actuator B and IMU |
 
@@ -201,7 +201,7 @@ It will receive target position commands from Preston's Nano and generate the ap
 
 Akshan's Nano is also assigned the proposed diagnostic display.
 
-The display model, wiring, and software are still TBD.
+Current plan for the Diagnostic feedback utilizes Hosyond 2.42 inches 128x64 I2C OLED Display Module.
 
 [Back to Table of Contents](#table-of-contents)
 
