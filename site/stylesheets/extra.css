@@ -1,12 +1,180 @@
-article{
-    a {
-        font-style:italic;
-        }
+
+/* =========================================
+   RAS304 TEAM 102
+   GREEN & GOLD ENGINEERING THEME
+   ========================================= */
+
+:root {
+  --md-primary-fg-color: #174D36;
+  --md-primary-fg-color--light: #286C4E;
+  --md-primary-fg-color--dark: #103824;
+  --md-accent-fg-color: #B68A20;
+  --md-typeset-a-color: #176A49;
 }
 
-blockquote{
-    background: #ffc;
-    p,li{
-        color: var(--md-typeset-color);
-    }
+/* NAVIGATION */
+
+.md-header,
+.md-tabs {
+  background-color: #174D36;
+}
+
+.md-tabs__link--active {
+  color: #F3C75B;
+  font-weight: 700;
+}
+
+.md-tabs__link:hover {
+  color: #F3C75B;
+}
+
+/* PAGE LAYOUT */
+
+.md-grid {
+  max-width: 1500px;
+}
+
+.md-main__inner {
+  margin-top: 1.5rem;
+}
+
+.md-content__inner {
+  padding-bottom: 3rem;
+}
+
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+/* HEADINGS */
+
+.md-typeset h1 {
+  color: #174D36;
+  font-weight: 750;
+  font-size: 2.1rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  color: #174D36;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #D5AC45;
+}
+
+.md-typeset h3 {
+  color: #286C4E;
+  font-weight: 650;
+  margin-top: 1.8rem;
+}
+
+/* PARAGRAPHS AND LISTS */
+
+.md-typeset p {
+  margin-bottom: 1rem;
+}
+
+.md-typeset li {
+  margin-bottom: 0.3rem;
+}
+
+/* LINKS */
+
+.md-typeset a {
+  color: #176A49;
+}
+
+.md-typeset a:hover {
+  color: #A77B15;
+}
+
+/* TABLES */
+
+.md-typeset table:not([class]) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #174D36;
+  color: white;
+  font-weight: 650;
+  padding: 0.9rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.75rem 0.9rem;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: #F4F8F3;
+}
+
+/* IMAGES AND DIAGRAMS */
+
+.md-typeset img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.md-typeset figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.md-typeset figcaption {
+  color: #64746A;
+  font-style: italic;
+}
+
+/* CODE BLOCKS */
+
+.md-typeset pre {
+  border-left: 4px solid #D5AC45;
+  border-radius: 6px;
+}
+
+/* QUOTES */
+
+.md-typeset blockquote {
+  border-left: 4px solid #D5AC45;
+  background-color: #F4F8F3;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+}
+
+/* HORIZONTAL DIVIDERS */
+
+.md-typeset hr {
+  border-bottom: 1px solid #D5AC45;
+  margin: 2rem 0;
+}
+
+/* FOOTER */
+
+.md-footer {
+  background-color: #103824;
+}
+
+/* MOBILE LAYOUT */
+
+@media screen and (max-width: 768px) {
+  .md-typeset h1 {
+    font-size: 1.7rem;
+  }
+
+  .md-main__inner {
+    margin-top: 0.75rem;
+  }
+
+  .md-typeset {
+    font-size: 0.8rem;
+  }
 }

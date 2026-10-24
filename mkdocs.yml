@@ -1,35 +1,40 @@
-site_name: RAS304 Team 102 Report Template
-site_url: https://RAS304-Fall26-102.github.io/RAS304TeamTemplate
-repo_url: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.ioi
+
+site_name: RAS304 | Team 102
+site_url: https://RAS304-Fall26-102.github.io/
+repo_url: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.io
 edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: custom_theme/
+
   palette:
-    primary: blue
-    accent: indigo
+    - scheme: default
+      primary: custom
+      accent: custom
+
   font:
     text: Roboto
+    code: Roboto Mono
+
   logo: static/logo304.svg
   favicon: static/logo304.png
 
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
     - navigation.top
     - navigation.path
     - navigation.indexes
     - navigation.prune
-    - content.action.edit
     - navigation.footer
-#    - navigation.sections
-#    - navigation.expand
-#    - navigation.instant # doesn't work that well
+    - toc.follow
+    - content.action.edit
+    - content.code.copy
 
 markdown_extensions:
-  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
+  - md_in_html
   - footnotes
   - pymdownx.arithmatex:
       generic: true
@@ -44,26 +49,26 @@ draft_docs: |
   **/*_unpublished.md
   **/*_draft.md
   **/*_draft**
-  
+
 plugins:
   - search
-  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - glightbox
 
 extra_css:
-  - stylesheets/extra.css  
+  - stylesheets/extra.css
 
 extra_javascript:
- - javascripts/mathjax.js
- - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 not_in_nav: |
   static
-  
-copyright: "Copyright &copy; 2025 team-name-here"
+
+copyright: "RAS304 Team 102 | Robotics and Autonomous Systems"
 
 extra:
   generator: false
   social:
     - icon: fontawesome/regular/file-code
-      link: /2025_fall
-      name: 2023 Site    
+      link: https://github.com/RAS304-Fall26-102/RAS304-Fall26-102.github.io
+      name: Team 102 GitHub Repository
