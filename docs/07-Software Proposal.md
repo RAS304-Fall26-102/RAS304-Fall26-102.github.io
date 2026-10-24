@@ -34,7 +34,7 @@ The main Nano calculates where the leg should move. The driver Nanos receive com
 
 ### Leg Control Block Diagram
 
-![Leg Control Block Diagram](../images/leg-control-block-diagram.png)
+![Leg Control Block Diagram](images/leg-control-block-diagram.png)
 
 *Figure 1: Proposed control architecture showing the main Nano and three driver Nanos.*
 
@@ -96,7 +96,7 @@ The main controller calculates movement and sends commands. The driver controlle
 
 ### Software Flow Diagram
 
-![Software Flow Diagram](../images/software-flow-diagram.png)
+![Software Flow Diagram](images/software-flow-diagram.png)
 
 *Figure 2: Proposed software flow showing movement commands and sensor feedback.*
 
