@@ -1,8 +1,4 @@
----
-title: Block Diagram, Process Diagram, and Message Structure
-hide:
-  - toc
----
+
 
 # Block Diagram, Process Diagram, and Message Structure
 
