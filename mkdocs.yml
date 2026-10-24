@@ -35,7 +35,7 @@ theme:
 nav:
   - Home: index.md
   - Team Organization: 02-Team-Organization.md
-  - User Needs and Benchmarking: 03-User-Needs-and-Benchmarking.md
+  - User Needs and Benchmarking: "03-User-Needs-and Benchmarking.md"
   - Product Requirements: 04-Product-Requirements.md
   - Design Ideation: 05-design-ideation.md
   - Team Block Diagram: 06-team-block-diagram.md
