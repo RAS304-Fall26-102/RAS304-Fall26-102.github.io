@@ -1,5 +1,7 @@
 ---
 title: Brainstorming Process
+hide:
+  - toc
 ---
 
 # Brainstorming Process

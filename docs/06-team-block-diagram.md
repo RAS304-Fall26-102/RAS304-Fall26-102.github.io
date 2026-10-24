@@ -1,4 +1,3 @@
-
 ---
 title: Block Diagram, Process Diagram, and Message Structure
 hide:
@@ -45,7 +44,7 @@ Each team member is responsible for a different portion of the robotic leg.
 | Team Member | Controller | Responsibilities |
 |---|---|---|
 | Preston | Main Nano | Kinematics, IR remote, RGB LED, communication |
-| Akshan | Driver Nano 1 | Servo motor and display |
+| Akshan | Driver Nano 1 | Servo motor and proposed display |
 | Bex | Driver Nano 2 | Linear actuator A, pressure sensor, limit switches, status LED |
 | Kaushik | Driver Nano 3 | Linear actuator B, IMU, limit switches, sensor feedback |
 
