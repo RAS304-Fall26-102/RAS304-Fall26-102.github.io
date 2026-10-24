@@ -1,8 +1,5 @@
-
 ---
 title: Ideation and Concept Generation
-hide:
-  - toc
 ---
 
 # Ideation and Concept Generation
