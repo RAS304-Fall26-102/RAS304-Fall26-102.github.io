@@ -3,6 +3,8 @@
 
 **Robotic Spider Leg Project**
 
+**Project Alpha**
+
 **Arizona State University | Fall 2026**
 
 **External Design Review — October 29, 2026**
