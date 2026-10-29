@@ -1,4 +1,5 @@
 
+
 # Ideation and Concept Generation
 
 The goal of this project is to design and build one functional robotic leg for a six-legged walking robot. During ideation, the team explored different ways to move the leg, detect its position, interact with the ground, and protect its components.
@@ -225,7 +226,7 @@ This concept uses rotary servo motors to move the joints.
 
 **Challenges:** Motor torque and joint loading must be considered.
 
-![Rotary Servo Concept](../images/Concept1_Leg-1.png)
+![Rotary Servo Concept](image/Concept1_Leg-1.png)
 
 ### Concept 2: Electric Linear-Actuator Leg
 
@@ -244,7 +245,7 @@ This concept uses electric linear actuators connected to mechanical linkages.
 
 **Challenges:** Actuator mounting and joint geometry require careful design.
 
-![Linear Actuator Concept](../images/Concept2_Leg-1.png)
+![Linear Actuator Concept](image/Concept2_Leg-1.png)
 
 ### Concept 3: Linear-Actuated Leg with Gecko End Effector
 
@@ -263,7 +264,7 @@ This concept combines electric linear actuators with a replaceable gecko-inspire
 
 **Challenges:** Gecko-style gripping introduces additional complexity.
 
-![Gecko End Effector Concept](../images/Concept3_Leg-1.png)
+![Gecko End Effector Concept](image/Concept3_Leg-1.png)
 
 ---
 
@@ -314,3 +315,17 @@ The team then combined compatible features into three concepts: a rotary servo d
 This process allowed the team to compare multiple approaches before developing the current hardware and software architecture.
 
 **Team documentation to complete:** Add the actual brainstorming participants, meeting method, meeting date, tools used, and final ranking scores before submission.
+
+## External Design Review — Selection Rationale
+
+The team began with a broad feature brainstorm and organized the ideas into joint architecture, actuation, mounting, sensing, foot contact, structure, wiring, safety, and control. The three concepts above were compared as alternative ways to meet the same leg-movement goal. The rotary-servo concept emphasizes simpler rotary joints; the electric linear-actuator concept uses extend/retract motion to drive the joints; and the third concept adds a gecko-inspired end effector to the linear-actuator approach.
+
+The current architecture combines features rather than adopting every part of one concept unchanged. The design retains linear actuation for assigned joints, a servo for another joint function, pressure and motion sensing, and mechanical limit switches. The team also divided control across four PIC18F57Q43 Curiosity Nano boards, with a main kinematics controller and three hardware-focused controllers. This division supports independent subsystem development and easier troubleshooting while UART carries commands and status between boards.
+
+### How the design changed
+
+The concept drawings focus primarily on the leg mechanism and contact features. As the design moved toward implementation, the team added explicit controller responsibilities, UART message planning, sensor assignments, limit-switch monitoring, and fault handling. These additions connect the mechanical concept to the embedded-system requirements. The gecko-style end-effector remains a concept feature rather than a verified component of the current electrical design.
+
+### Review considerations
+
+The final actuator and driver specifications, electrical power requirements, and system-level tests still need to be confirmed. Those choices will determine whether the selected mechanism meets the team's force, motion, and power targets.

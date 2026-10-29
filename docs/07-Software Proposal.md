@@ -1,4 +1,5 @@
 
+
 # Software Proposal
 
 ## Overview
@@ -244,3 +245,24 @@ The team will test the individual controllers before combining them into the com
 - Final software testing
 
 The software proposal will continue to be updated as the team finalizes the hardware and begins programming.
+
+## External Design Review — Software Design Rationale
+
+The software is divided by hardware responsibility to match the four-controller block diagram. The main controller manages movement calculations and distributes commands, while the driver controllers translate those commands into local actuator or servo actions and return sensor and fault information. This organization avoids putting all peripheral handling into the main control loop and gives each team member a subsystem that can be tested independently.
+
+The proposed sequence initializes communication and hardware first, checks relevant inputs, processes a command, applies the permitted output, and reports status. Checking limit switches before and during actuator commands is intended to prevent continued commanded motion into an active travel limit. Communication-loss handling is included because a driver must not continue an old movement command indefinitely when the main controller is no longer communicating.
+
+### Relationship to product requirements
+
+| Requirement | Proposed software behavior |
+| --- | --- |
+| Coordinate three-joint motion | Main controller computes and distributes joint commands |
+| Control assigned motors | Driver controllers interpret and apply local commands |
+| Communicate between boards | UART command and status messages |
+| Monitor mechanical limits | Driver controllers read limit switches |
+| Report operating conditions | Pressure, IMU, and status data returned to main controller |
+| Handle faults | Stop commanded motion and report fault status |
+
+### Implementation checks before testing
+
+The team still needs to verify UART routing and message framing, define timeouts and recovery rules, configure the PIC peripherals, and test the stop response with actual actuator hardware. The diagrams above show the intended software flow rather than measured performance.

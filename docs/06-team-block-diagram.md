@@ -1,5 +1,4 @@
 
-
 # Block Diagram, Process Diagram, and Message Structure
 
 This page explains the proposed hardware organization, software processes, and communication between the four PIC18F57Q43 Curiosity Nano microcontrollers used to control one robotic spider leg.
@@ -23,7 +22,7 @@ The system uses four Curiosity Nano microcontrollers. One Nano handles the main 
 
 ### Original Team 102 Block Diagram
 
-![Original Team 102 Block Diagram](../images/team-block-diagram.png)
+![Original Team 102 Block Diagram](images/team-block-diagram.png)
 
 *Figure 1: Original Team 102 block diagram showing the main controller and three driver controllers.*
 
@@ -280,3 +279,26 @@ The following items still need to be finalized:
 - Safety testing
 
 The diagrams and tables will be updated as the team completes the hardware and software design.
+
+## External Design Review — Architecture Rationale
+
+The team selected four PIC18F57Q43 Curiosity Nano boards to separate movement planning from individual hardware control. Preston's main controller handles kinematics and system coordination. Akshan's controller handles the servo and proposed display. Bex's Driver Nano 2 handles linear actuator A, pressure feedback, limit switches, and its status indicator. Kaushik's controller handles linear actuator B, IMU data, limit switches, and sensor feedback. This allocation matches the team responsibilities documented above and makes it possible to develop and troubleshoot each subsystem separately.
+
+UART is the planned method for sharing movement commands and status. The block diagram and message structure must be read together: the diagram identifies the devices and connections, while the message section describes what information is intended to cross those connections. Actual UART wiring, pin configuration, and communication timing must be verified before integration.
+
+### Product requirement traceability
+
+| Project need | Proposed implementation | Verification still required |
+| --- | --- | --- |
+| Coordinated leg movement | Main controller kinematics and commands to driver boards | Joint movement test |
+| Actuator and servo control | Assigned driver controllers | Electrical and mechanical testing |
+| Joint travel limits | Limit-switch inputs on driver boards | End-of-travel and fault tests |
+| Sensor feedback | Pressure sensor and IMU routed through assigned controllers | Sensor calibration and reporting |
+| Inter-controller communication | UART messages | End-to-end communication test |
+| Safe response to communication loss | Planned motion-stop behavior | Timeout and recovery testing |
+
+The current block diagram represents the intended design, not a completed verification of these requirements.
+
+## Editable Diagram Source
+
+[Download the team block diagram source](images/team-block-diagram.drawio)
