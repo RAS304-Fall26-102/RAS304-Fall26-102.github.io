@@ -84,7 +84,7 @@ The product requirements use a priority scale from **P1 (lowest priority)** to *
 ### Software/Functionality
 
 - **2.1** The leg's control software shall be written in Python to maximize accessibility for hobbyist and student developers. (P10)
-- **2.2** The leg shall use industry-standard communication protocols, including UART and I2C, for sensor and actuator communication. (P9)
+- **2.2** The leg shall use industry-standard communication protocols, using UART for communication between the leg's controllers. (P9)
 - **2.3** The leg's software shall be modular, separating motion control, sensor input, and communication functions. (P8)
 - **2.4** The codebase shall include documentation and a setup guide allowing a first-time user to run a basic movement demonstration within one hour. (P7)
 
@@ -135,7 +135,7 @@ Verification methods include inspection, analysis, testing, and demonstration.
 | **1.4** | A designated structural link shall be removable and reinstalled within 20 minutes. | Demonstration |
 | **1.5** | Printed structural components shall use a single identified thermoplastic material where possible. | Inspection |
 | **2.1** | The primary control software shall be written in Python and execute a basic movement command. | Inspection / Demonstration |
-| **2.2** | UART and I2C communication interfaces shall successfully transmit sensor and actuator data during 10 consecutive trials. | Test |
+| **2.2** | UART communication between the controllers shall successfully transmit sensor and actuator data during 10 consecutive trials. | Test |
 | **2.3** | Motion control, sensor input, and communication functions shall exist as separate software modules. | Inspection |
 | **2.4** | A first-time user shall complete a basic movement demonstration within 60 minutes using the documentation. | Demonstration |
 | **3.1** | The leg shall connect to a companion smartphone application through Bluetooth and execute a movement command. | Demonstration |
