@@ -952,6 +952,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-design-review-architecture-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Architecture Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Architecture Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-requirement-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product requirement traceability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editable-diagram-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editable Diagram Source
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1367,6 +1406,45 @@
     <span class="md-ellipsis">
       
         Development Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-design-review-architecture-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Architecture Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Architecture Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-requirement-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product requirement traceability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editable-diagram-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editable Diagram Source
       
     </span>
   </a>
@@ -1830,6 +1908,54 @@
 <li>Safety testing</li>
 </ul>
 <p>The diagrams and tables will be updated as the team completes the hardware and software design.</p>
+<h2 id="external-design-review-architecture-rationale">External Design Review — Architecture Rationale</h2>
+<p>The team selected four PIC18F57Q43 Curiosity Nano boards to separate movement planning from individual hardware control. Preston's main controller handles kinematics and system coordination. Akshan's controller handles the servo and proposed display. Bex's Driver Nano 2 handles linear actuator A, pressure feedback, limit switches, and its status indicator. Kaushik's controller handles linear actuator B, IMU data, limit switches, and sensor feedback. This allocation matches the team responsibilities documented above and makes it possible to develop and troubleshoot each subsystem separately.</p>
+<p>UART is the planned method for sharing movement commands and status. The block diagram and message structure must be read together: the diagram identifies the devices and connections, while the message section describes what information is intended to cross those connections. Actual UART wiring, pin configuration, and communication timing must be verified before integration.</p>
+<h3 id="product-requirement-traceability">Product requirement traceability</h3>
+<table>
+<thead>
+<tr>
+<th>Project need</th>
+<th>Proposed implementation</th>
+<th>Verification still required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coordinated leg movement</td>
+<td>Main controller kinematics and commands to driver boards</td>
+<td>Joint movement test</td>
+</tr>
+<tr>
+<td>Actuator and servo control</td>
+<td>Assigned driver controllers</td>
+<td>Electrical and mechanical testing</td>
+</tr>
+<tr>
+<td>Joint travel limits</td>
+<td>Limit-switch inputs on driver boards</td>
+<td>End-of-travel and fault tests</td>
+</tr>
+<tr>
+<td>Sensor feedback</td>
+<td>Pressure sensor and IMU routed through assigned controllers</td>
+<td>Sensor calibration and reporting</td>
+</tr>
+<tr>
+<td>Inter-controller communication</td>
+<td>UART messages</td>
+<td>End-to-end communication test</td>
+</tr>
+<tr>
+<td>Safe response to communication loss</td>
+<td>Planned motion-stop behavior</td>
+<td>Timeout and recovery testing</td>
+</tr>
+</tbody>
+</table>
+<p>The current block diagram represents the intended design, not a completed verification of these requirements.</p>
+<h2 id="editable-diagram-source">Editable Diagram Source</h2>
+<p><a href="../images/team-block-diagram.drawio">Download the team block diagram source</a></p>
 
 
 

@@ -929,6 +929,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-design-review-software-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Software Design Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Software Design Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-to-product-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to product requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-checks-before-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation checks before testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1262,6 +1301,45 @@
     <span class="md-ellipsis">
       
         Items Still Being Finalized
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-design-review-software-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Software Design Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Software Design Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-to-product-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to product requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-checks-before-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation checks before testing
       
     </span>
   </a>
@@ -1641,6 +1719,46 @@
 <li>Final software testing</li>
 </ul>
 <p>The software proposal will continue to be updated as the team finalizes the hardware and begins programming.</p>
+<h2 id="external-design-review-software-design-rationale">External Design Review — Software Design Rationale</h2>
+<p>The software is divided by hardware responsibility to match the four-controller block diagram. The main controller manages movement calculations and distributes commands, while the driver controllers translate those commands into local actuator or servo actions and return sensor and fault information. This organization avoids putting all peripheral handling into the main control loop and gives each team member a subsystem that can be tested independently.</p>
+<p>The proposed sequence initializes communication and hardware first, checks relevant inputs, processes a command, applies the permitted output, and reports status. Checking limit switches before and during actuator commands is intended to prevent continued commanded motion into an active travel limit. Communication-loss handling is included because a driver must not continue an old movement command indefinitely when the main controller is no longer communicating.</p>
+<h3 id="relationship-to-product-requirements">Relationship to product requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Proposed software behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coordinate three-joint motion</td>
+<td>Main controller computes and distributes joint commands</td>
+</tr>
+<tr>
+<td>Control assigned motors</td>
+<td>Driver controllers interpret and apply local commands</td>
+</tr>
+<tr>
+<td>Communicate between boards</td>
+<td>UART command and status messages</td>
+</tr>
+<tr>
+<td>Monitor mechanical limits</td>
+<td>Driver controllers read limit switches</td>
+</tr>
+<tr>
+<td>Report operating conditions</td>
+<td>Pressure, IMU, and status data returned to main controller</td>
+</tr>
+<tr>
+<td>Handle faults</td>
+<td>Stop commanded motion and report fault status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implementation-checks-before-testing">Implementation checks before testing</h3>
+<p>The team still needs to verify UART routing and message framing, define timeouts and recovery rules, configure the PIC peripherals, and test the stop response with actual actuator hardware. The diagrams above show the intended software flow rather than measured performance.</p>
 
 
 

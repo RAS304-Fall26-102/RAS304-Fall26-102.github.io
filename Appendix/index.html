@@ -25,7 +25,7 @@
 
     
       
-        <title>Appendix - Main Page - RAS304 | Team 102</title>
+        <title>Team 102 — Robotic Spider Leg - RAS304 | Team 102</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#team-102-robotic-spider-leg" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Appendix - Main Page
+              Team 102 — Robotic Spider Leg
             
           </span>
         </div>
@@ -640,6 +645,132 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#driver-controllers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Driver Controllers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servo-and-display-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Servo and Display Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-datasheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Datasheets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-project-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Project Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-design-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -672,18 +803,84 @@
   
 
 
-  <h1>Appendix - Main Page</h1>
+<h1 id="team-102-robotic-spider-leg">Team 102 — Robotic Spider Leg</h1>
+<h2 id="project-overview">Project Overview</h2>
+<p>Team 102 is designing one functional leg for a six-legged robotic spider. The goal is to create a leg that can move through multiple joints, respond to movement commands, and provide information about its position and operating conditions. Our design uses multiple microcontrollers that communicate through UART. The main controller handles movement calculations, while the other controllers manage actuators, sensors, and other hardware. The system is planned to use linear actuators, a servo motor, limit switches, and sensors to support controlled movement and basic safety functions. The team is currently finalizing its hardware and software designs before moving into full implementation and testing.</p>
+<h2 id="project-objectives">Project Objectives</h2>
+<p>The main objectives of this project are to:</p>
+<ul>
+<li>Design and build one robotic spider leg.</li>
+<li>Coordinate movement across three joints.</li>
+<li>Use UART for communication between microcontrollers.</li>
+<li>Control the assigned actuators and servo motor.</li>
+<li>Monitor limit switches and sensor information.</li>
+<li>Stop commanded movement when a fault or communication failure is detected.</li>
+<li>Document the hardware and software design.</li>
+</ul>
+<h2 id="system-architecture">System Architecture</h2>
+<p>The project is divided into smaller subsystems.</p>
+<h3 id="main-controller">Main Controller</h3>
+<p>The main controller handles the kinematics calculations and sends movement commands to the other controllers.</p>
+<h3 id="driver-controllers">Driver Controllers</h3>
+<p>The driver controllers manage their assigned joint actuators and monitor the relevant limit switches.</p>
+<h3 id="servo-and-display-controller">Servo and Display Controller</h3>
+<p>The servo/display controller handles its assigned servo motor and the planned diagnostic display.</p>
+<p>The display specifications are still being finalized.</p>
+<h2 id="project-documentation">Project Documentation</h2>
+<p>The team report contains the following sections:</p>
+<ol>
+<li>Team Organization</li>
+<li>User Needs and Benchmarking</li>
+<li>Product Requirements</li>
+<li>Design Ideation</li>
+<li>Team Block Diagram</li>
+<li>Software Proposal</li>
+<li>Individual Datasheets</li>
+</ol>
+<p>These pages document the decisions, requirements, and progress of the project.</p>
+<h2 id="individual-datasheets">Individual Datasheets</h2>
+<p>Each team member maintains an individual datasheet describing their assigned subsystem.</p>
+<table>
+<thead>
+<tr>
+<th>Subsystem</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main Controller</td>
+<td>Kinematics and command distribution</td>
+</tr>
+<tr>
+<td>Driver Nano 2</td>
+<td>Linear actuator control</td>
+</tr>
+<tr>
+<td>Additional Controller</td>
+<td>Assigned hardware and sensors</td>
+</tr>
+<tr>
+<td>Servo/Display Controller</td>
+<td>Servo motor and display</td>
+</tr>
+</tbody>
+</table>
+<p>Add the individual website links here once their final URLs are confirmed.</p>
+<h2 id="current-project-status">Current Project Status</h2>
+<p>The team has established the general system architecture and selected UART as the communication method.</p>
+<p>The block diagram and software proposal describe how the subsystems are intended to communicate.</p>
+<p>The team is continuing to finalize component selections, electrical schematics, software implementation, and testing procedures.</p>
+<h2 id="external-design-review">External Design Review</h2>
+<p><strong>Date:</strong> October 29, 2026</p>
+<p>The purpose of this review is to present the current design, explain the team's engineering decisions, and receive feedback before implementation.</p>
+<p>The team will use this report to walk reviewers through the project.</p>
 
-<p>The Appendix is where supporting information goes that is not in the main body.</p>
 
 
 
 
 
-
-
-  
-  
 
 
 

@@ -813,6 +813,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#external-design-review-selection-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Selection Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Selection Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-design-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the design changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1146,6 +1185,45 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-design-review-selection-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Design Review — Selection Rationale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Design Review — Selection Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-design-changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the design changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Review considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2048,6 +2126,13 @@
 <p>The team then combined compatible features into three concepts: a rotary servo design, a linear-actuator design, and a linear-actuator design with a gecko-inspired end effector.</p>
 <p>This process allowed the team to compare multiple approaches before developing the current hardware and software architecture.</p>
 <p><strong>Team documentation to complete:</strong> Add the actual brainstorming participants, meeting method, meeting date, tools used, and final ranking scores before submission.</p>
+<h2 id="external-design-review-selection-rationale">External Design Review — Selection Rationale</h2>
+<p>The team began with a broad feature brainstorm and organized the ideas into joint architecture, actuation, mounting, sensing, foot contact, structure, wiring, safety, and control. The three concepts above were compared as alternative ways to meet the same leg-movement goal. The rotary-servo concept emphasizes simpler rotary joints; the electric linear-actuator concept uses extend/retract motion to drive the joints; and the third concept adds a gecko-inspired end effector to the linear-actuator approach.</p>
+<p>The current architecture combines features rather than adopting every part of one concept unchanged. The design retains linear actuation for assigned joints, a servo for another joint function, pressure and motion sensing, and mechanical limit switches. The team also divided control across four PIC18F57Q43 Curiosity Nano boards, with a main kinematics controller and three hardware-focused controllers. This division supports independent subsystem development and easier troubleshooting while UART carries commands and status between boards.</p>
+<h3 id="how-the-design-changed">How the design changed</h3>
+<p>The concept drawings focus primarily on the leg mechanism and contact features. As the design moved toward implementation, the team added explicit controller responsibilities, UART message planning, sensor assignments, limit-switch monitoring, and fault handling. These additions connect the mechanical concept to the embedded-system requirements. The gecko-style end-effector remains a concept feature rather than a verified component of the current electrical design.</p>
+<h3 id="review-considerations">Review considerations</h3>
+<p>The final actuator and driver specifications, electrical power requirements, and system-level tests still need to be confirmed. Those choices will determine whether the selected mechanism meets the team's force, motion, and power targets.</p>
 
 
 
