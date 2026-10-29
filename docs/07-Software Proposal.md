@@ -30,7 +30,7 @@ The main Nano calculates where the leg should move. The driver Nanos receive com
 | Main Nano | Preston | Kinematics, IR remote, RGB LED, communication |
 | Driver Nano 1 | Akshan | Servo motor and proposed display |
 | Driver Nano 2 | Bex | Linear actuator A, pressure sensor, limit switches, status LED |
-| Driver Nano 3 | Kaushik | Linear actuator B, IMU, limit switches, sensor feedback |
+| Driver Nano 3 | Kaushik | Linear actuator B with slide-pot position feedback and stall detection, LIS3DH IMU (jerk and impulse), UART feedback |
 
 ### Leg Control Block Diagram
 
@@ -80,11 +80,14 @@ Bex's Nano is responsible for:
 
 Kaushik's Nano is responsible for:
 
-- Receiving actuator commands
-- Controlling linear actuator B
-- Reading the IMU
-- Checking assigned limit switches
-- Sending sensor feedback to the main Nano
+- Receiving linear actuator B position commands from the main Nano over UART
+- Controlling linear actuator B (DFRobot FIT0577 N20 lead-screw motor) through a DRV8833 motor driver
+- Reading a slide potentiometer for the actuator's position (closed-loop control)
+- Monitoring motor current for stall detection (0.61 A current limit)
+- Reading the LIS3DH IMU (accelerometer) and computing jerk and impulse
+- Sending IMU data and actuator status to the main Nano over UART
+
+Driver Nano 3 is powered by its own 9 V supply. Its only connection to the main Nano is the UART link (pins 1 and 2 of the ribbon cable) and a ground reference (pin 8). Full details are on [Kaushik's datasheet](https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/).
 
 ---
 

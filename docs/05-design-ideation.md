@@ -225,7 +225,7 @@ This concept uses rotary servo motors to move the joints.
 
 **Challenges:** Motor torque and joint loading must be considered.
 
-![Rotary Servo Concept](../images/Concept1_Leg-1.png)
+![Rotary Servo Concept](image/Concept1_Leg-1.png)
 
 ### Concept 2: Electric Linear-Actuator Leg
 
@@ -244,7 +244,7 @@ This concept uses electric linear actuators connected to mechanical linkages.
 
 **Challenges:** Actuator mounting and joint geometry require careful design.
 
-![Linear Actuator Concept](../images/Concept2_Leg-1.png)
+![Linear Actuator Concept](image/Concept2_Leg-1.png)
 
 ### Concept 3: Linear-Actuated Leg with Gecko End Effector
 
@@ -263,7 +263,7 @@ This concept combines electric linear actuators with a replaceable gecko-inspire
 
 **Challenges:** Gecko-style gripping introduces additional complexity.
 
-![Gecko End Effector Concept](../images/Concept3_Leg-1.png)
+![Gecko End Effector Concept](image/Concept3_Leg-1.png)
 
 ---
 

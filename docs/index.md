@@ -5,13 +5,13 @@ tags:
 - tag2
 ---
 <center>
-<font size="8">Project Alpha<br>
+<font size="8">Modular Spider Leg<br>
 <font size="5">Team 102<br>
 <font size="5">Kaushik, Preston, Akshan, Bex<br>
-**Submission: month, DD, YYYY**<br>
-Fall 2025<br>
+**Submission: October 29, 2026**<br>
+Fall 2026<br>
 <font size="4">Arizona State University<br>
-**EGR 304**<br>
+**RAS 304**<br>
 Professor Thangavelu<br>
   
 

@@ -23,9 +23,11 @@ The system uses four Curiosity Nano microcontrollers. One Nano handles the main 
 
 ### Original Team 102 Block Diagram
 
-![Original Team 102 Block Diagram](../images/team-block-diagram.png)
+![Original Team 102 Block Diagram](images/team-block-diagram.png)
 
 *Figure 1: Original Team 102 block diagram showing the main controller and three driver controllers.*
+
+Block diagram source: [draw.io source (ZIP)](images/team-block-diagram-source.zip) · [draw.io file](images/team-block-diagram.drawio)
 
 The main Nano acts as the central controller. The other Nanos receive movement commands and return sensor information.
 
@@ -42,7 +44,7 @@ Each team member is responsible for a different portion of the robotic leg.
 | Preston | Main Nano | Kinematics, IR remote, RGB LED, communication |
 | Akshan | Driver Nano 1 | Servo motor and proposed display |
 | Bex | Driver Nano 2 | Linear actuator A, pressure sensor, limit switches, status LED |
-| Kaushik | Driver Nano 3 | Linear actuator B, IMU, limit switches, sensor feedback |
+| Kaushik | Driver Nano 3 | Linear actuator B with slide-pot position feedback and stall detection, LIS3DH IMU (jerk and impulse), UART feedback |
 
 ### Main Nano — Preston
 
@@ -83,11 +85,14 @@ This controller is responsible for:
 
 This controller is responsible for:
 
-- Receiving movement commands
-- Controlling linear actuator B
-- Reading the IMU
-- Monitoring assigned limit switches
-- Sending sensor information to the main Nano
+- Receiving linear actuator B position commands from the main Nano over UART
+- Controlling linear actuator B (DFRobot FIT0577 N20 lead-screw motor) through a DRV8833 motor driver
+- Reading a slide potentiometer for the actuator's position (closed-loop control)
+- Monitoring motor current for stall detection (0.61 A current limit)
+- Reading the LIS3DH IMU (accelerometer) and computing jerk and impulse
+- Sending IMU data and actuator status to the main Nano over UART
+
+Driver Nano 3 is powered by its own 9 V supply. Its only connection to the main Nano is the UART link (pins 1 and 2 of the ribbon cable) and a ground reference (pin 8). Full details are on [Kaushik's datasheet](https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/).
 
 ---
 
