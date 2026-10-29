@@ -49,7 +49,7 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
@@ -163,7 +163,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
@@ -180,7 +180,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -416,7 +416,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix="">
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -617,7 +617,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#table-of-contents" class="md-nav__link">
@@ -643,10 +643,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#original-team-102-block-diagram" class="md-nav__link">
+  <a href="#team-102-block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original Team 102 Block Diagram
+        Team 102 Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-block-diagram-was-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Block Diagram Was Structured
       
     </span>
   </a>
@@ -882,10 +893,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limit-switches" class="md-nav__link">
+  <a href="#joint-position-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limit Switches
+        Joint Position Limits
       
     </span>
   </a>
@@ -1027,7 +1038,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#table-of-contents" class="md-nav__link">
@@ -1053,10 +1064,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#original-team-102-block-diagram" class="md-nav__link">
+  <a href="#team-102-block-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original Team 102 Block Diagram
+        Team 102 Block Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-block-diagram-was-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Block Diagram Was Structured
       
     </span>
   </a>
@@ -1292,10 +1314,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limit-switches" class="md-nav__link">
+  <a href="#joint-position-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limit Switches
+        Joint Position Limits
       
     </span>
   </a>
@@ -1399,11 +1421,18 @@
 <hr>
 <h2 id="team-block-diagram">Team Block Diagram</h2>
 <p>The system uses four Curiosity Nano microcontrollers. One Nano handles the main calculations and coordinates the other three Nanos, which control individual motors, actuators, and sensors.</p>
-<h3 id="original-team-102-block-diagram">Original Team 102 Block Diagram</h3>
+<h3 id="team-102-block-diagram">Team 102 Block Diagram</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/team-block-diagram.png" data-desc-position="bottom"><img alt="Original Team 102 Block Diagram" src="../images/team-block-diagram.png"></a></p>
-<p><em>Figure 1: Original Team 102 block diagram showing the main controller and three driver controllers.</em></p>
+<p><em>Figure 1: Team 102 block diagram showing the main controller (Preston) and three driver controllers (Akshan, Bex, Kaushik). Each link is an 8-pin ribbon cable carrying UART and a ground reference; every board has its own power supply.</em></p>
+<p>Block diagram source: <a href="../images/team-block-diagram-source.zip">draw.io source (ZIP)</a> · <a href="../images/team-block-diagram.drawio">draw.io file</a></p>
 <p>The main Nano acts as the central controller. The other Nanos receive movement commands and return sensor information.</p>
-<p>The team plans to use 8-pin ribbon cable connectors between the controllers and their assigned components.</p>
+<p>Each driver Nano connects to its own connector on the main Nano with an 8-pin ribbon cable. The cables carry only the UART link (pin 1: commands to the driver, pin 2: feedback to the main Nano) and a ground reference on pin 8. No power is shared between boards: each board has its own supply.</p>
+<h3 id="how-the-block-diagram-was-structured">How the Block Diagram Was Structured</h3>
+<p><strong>Hub and spoke.</strong> The kinematics have to coordinate every joint of the leg, so one central board (Preston's main Nano) computes them and sends commands out to the three joint boards. Each driver board has its own direct cable to the main Nano, so a fault on one cable doesn't cut off the other joints.</p>
+<p><strong>One board per joint.</strong> Each driver Nano owns one joint and the sensor that goes with it: Akshan the servo, Bex linear actuator A and the pressure sensor, and Kaushik linear actuator B and the IMU. This keeps motion control, sensing and communication separated, as Requirement 2.3 asks, and lets each teammate design, test and document a board independently.</p>
+<p><strong>Minimal interconnections.</strong> Each link needs at most two signal pins plus ground: UART receive for the command and UART transmit for feedback. Pins 3–7 stay free on every cable for future signals. Using UART on every link meets Requirement 2.2 (a standard communication protocol), and keeping power off the ribbon means a fault on one board's supply can't damage the others.</p>
+<p><strong>Risk of losing a teammate.</strong> If a driver board is lost, only that joint or sensor is affected, and the rest of the leg can still be commanded. The main Nano is the single point of failure: without it, no kinematics commands are generated. To reduce that risk, the kinematics code should be written so it can be moved onto another teammate's Nano if needed.</p>
+<p><strong>How it meets the product requirements.</strong> Separate boards with standard connectors support repair and modification (Requirements 4.3 and 4.4). The UART links meet Requirement 2.2. Each driver stops its actuator if UART commands stop arriving, which supports the fail-safe stop in Requirement 6.4.</p>
 <hr>
 <h2 id="subsystem-responsibilities">Subsystem Responsibilities</h2>
 <p>Each team member is responsible for a different portion of the robotic leg.</p>
@@ -1429,12 +1458,12 @@
 <tr>
 <td>Bex</td>
 <td>Driver Nano 2</td>
-<td>Linear actuator A, pressure sensor, limit switches, status LED</td>
+<td>Linear actuator A, pressure sensor, status LED</td>
 </tr>
 <tr>
 <td>Kaushik</td>
 <td>Driver Nano 3</td>
-<td>Linear actuator B, IMU, limit switches, sensor feedback</td>
+<td>Linear actuator B with slide-pot position feedback and stall detection, LIS3DH IMU (jerk and impulse), UART feedback</td>
 </tr>
 </tbody>
 </table>
@@ -1465,19 +1494,20 @@
 <li>Receiving movement commands</li>
 <li>Controlling linear actuator A</li>
 <li>Reading the pressure sensor</li>
-<li>Monitoring assigned limit switches</li>
 <li>Controlling a local status LED</li>
 <li>Sending sensor information to the main Nano</li>
 </ul>
 <h3 id="driver-nano-3-kaushik">Driver Nano 3 — Kaushik</h3>
 <p>This controller is responsible for:</p>
 <ul>
-<li>Receiving movement commands</li>
-<li>Controlling linear actuator B</li>
-<li>Reading the IMU</li>
-<li>Monitoring assigned limit switches</li>
-<li>Sending sensor information to the main Nano</li>
+<li>Receiving linear actuator B position commands from the main Nano over UART</li>
+<li>Controlling linear actuator B (DFRobot FIT0577 N20 lead-screw motor) through a DRV8833 motor driver</li>
+<li>Reading a slide potentiometer for the actuator's position (closed-loop control)</li>
+<li>Monitoring motor current for stall detection (0.61 A current limit)</li>
+<li>Reading the LIS3DH IMU (accelerometer) and computing jerk and impulse</li>
+<li>Sending IMU data and actuator status to the main Nano over UART</li>
 </ul>
+<p>Driver Nano 3 is powered by its own 9 V supply. Its only connection to the main Nano is the UART link (pins 1 and 2 of the ribbon cable) and a ground reference (pin 8). Full details are on <a href="https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/">Kaushik's datasheet</a>.</p>
 <hr>
 <h2 id="process-diagram">Process Diagram</h2>
 <p>The proposed process begins when the system is powered on.</p>
@@ -1503,7 +1533,7 @@
 <li>Check the command against movement limits.</li>
 <li>Control the assigned motor or actuator.</li>
 <li>Read the connected sensors.</li>
-<li>Check the limit switches.</li>
+<li>Check the joint position against its allowed range.</li>
 <li>Send feedback to the main Nano.</li>
 <li>Repeat until the system is stopped.</li>
 </ol>
@@ -1512,7 +1542,7 @@
 <h2 id="communication-and-message-structure">Communication and Message Structure</h2>
 <p>The team currently plans to use UART communication between the Nanos.</p>
 <p>UART allows the microcontrollers to send movement commands and return sensor information using serial communication.</p>
-<p>The exact wiring arrangement, pin assignments, and baud rate have not been finalized.</p>
+<p>Each link uses UART on ribbon pins 1 and 2 with a ground reference on pin 8. The baud rate has not been finalized.</p>
 <h3 id="communication-overview">Communication Overview</h3>
 <table>
 <thead>
@@ -1620,51 +1650,39 @@
 </table>
 <p>These command names are proposed examples. The final message format will be determined during programming and testing.</p>
 <h3 id="ribbon-cable-connections">Ribbon Cable Connections</h3>
-<p>The team has discussed using 8-pin ribbon cables for connections between controllers and hardware.</p>
-<p>The proposed connector organization includes:</p>
+<p>Each driver Nano connects to the main Nano with an 8-pin ribbon cable using the class-standard pinout.</p>
+<p>The connector pinout is:</p>
 <table>
 <thead>
 <tr>
 <th>Pin</th>
-<th>Proposed Use</th>
+<th>Use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Digital signal or communication</td>
+<td>UART: command from the main Nano to the driver Nano</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Digital signal or communication</td>
+<td>UART: feedback from the driver Nano to the main Nano</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Digital signal</td>
+<td>3–5</td>
+<td>Digital, not used</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Digital signal</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Digital signal</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Analog signal</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Analog signal</td>
+<td>6–7</td>
+<td>Analog, not used</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Ground</td>
+<td>Ground reference (no power is carried on the ribbon)</td>
 </tr>
 </tbody>
 </table>
-<p>This is a proposed layout, not the final wiring schematic. The team will confirm the exact signals and electrical compatibility before connecting the boards.</p>
+<p>Each board has its own power supply, so the ribbon carries only the UART link and the shared ground reference that UART needs.</p>
 <hr>
 <h2 id="sensors-and-actuators">Sensors and Actuators</h2>
 <p>The robotic leg will use multiple components to control movement and monitor its position.</p>
@@ -1718,8 +1736,8 @@
 <td>Measures orientation and movement</td>
 </tr>
 <tr>
-<td>Limit switches</td>
-<td>Detect joint movement limits</td>
+<td>Actuator position sensors</td>
+<td>Measure joint position for closed-loop control and range limits</td>
 </tr>
 </tbody>
 </table>
@@ -1748,10 +1766,10 @@
 <h2 id="safety-and-error-handling">Safety and Error Handling</h2>
 <p>Safety is important because the robotic leg contains moving joints and actuators.</p>
 <p>The software must prevent commands from causing movement beyond the allowed joint range.</p>
-<h3 id="limit-switches">Limit Switches</h3>
-<p>The current plan includes two limit switches for each of the three joints.</p>
-<p>These switches will help identify when a joint reaches either end of its allowed movement.</p>
-<p>If a limit switch is activated, the software should stop movement farther into that limit.</p>
+<h3 id="joint-position-limits">Joint Position Limits</h3>
+<p>The leg does not use limit switches. Each driver Nano knows its joint's position from its own feedback (servo position or the linear actuator's position sensor), and the software keeps every joint inside its allowed range.</p>
+<p>Driver Nano 3's motor driver also limits motor current and detects a stall, so its joint is stopped before the motor overheats if it reaches a hard stop or jams.</p>
+<p>If a command would move a joint past its allowed range, the driver Nano rejects it and stops at the limit.</p>
 <h3 id="communication-loss">Communication Loss</h3>
 <p>If a driver Nano loses communication with the main Nano, the affected actuator should stop safely.</p>
 <p>The controller should report the communication fault when communication becomes available again.</p>
@@ -1767,8 +1785,12 @@
 </thead>
 <tbody>
 <tr>
-<td>Joint limit reached</td>
+<td>Joint position limit reached</td>
 <td>Stop movement farther into the limit</td>
+</tr>
+<tr>
+<td>Motor stall or over-current</td>
+<td>Stop the motor and report a fault</td>
 </tr>
 <tr>
 <td>Communication lost</td>
@@ -1828,7 +1850,7 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top

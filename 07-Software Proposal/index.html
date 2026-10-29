@@ -49,7 +49,7 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
@@ -163,7 +163,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
@@ -180,7 +180,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -416,7 +416,7 @@
 </a>
     </div>
   
-  <ul class="md-nav__list" data-md-scrollfix="">
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -644,7 +644,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
@@ -853,10 +853,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limit-switches" class="md-nav__link">
+  <a href="#joint-position-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limit Switches
+        Joint Position Limits
       
     </span>
   </a>
@@ -988,7 +988,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
@@ -1197,10 +1197,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#limit-switches" class="md-nav__link">
+  <a href="#joint-position-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limit Switches
+        Joint Position Limits
       
     </span>
   </a>
@@ -1345,12 +1345,12 @@
 <tr>
 <td>Driver Nano 2</td>
 <td>Bex</td>
-<td>Linear actuator A, pressure sensor, limit switches, status LED</td>
+<td>Linear actuator A, pressure sensor, status LED</td>
 </tr>
 <tr>
 <td>Driver Nano 3</td>
 <td>Kaushik</td>
-<td>Linear actuator B, IMU, limit switches, sensor feedback</td>
+<td>Linear actuator B with slide-pot position feedback and stall detection, LIS3DH IMU (jerk and impulse), UART feedback</td>
 </tr>
 </tbody>
 </table>
@@ -1359,7 +1359,7 @@
 <p><em>Figure 1: Proposed control architecture showing the main Nano and three driver Nanos.</em></p>
 <p>The main Nano acts as the central controller. Each driver Nano is responsible for its assigned hardware.</p>
 <p>The final motor drivers, wiring, and display are still being selected.</p>
-<p><strong>Note:</strong> UART is the current communication plan. Any older I2C/Serial labels in the diagram will need to be updated.</p>
+<p><strong>Note:</strong> All communication between the Nanos uses UART. Any older I2C/Serial labels in the diagram will need to be updated. Each Nano has its own power supply; the ribbon cables carry only UART and a ground reference.</p>
 <h3 id="main-nano">Main Nano</h3>
 <p>The main Nano is responsible for:</p>
 <ul>
@@ -1385,19 +1385,20 @@
 <li>Receiving actuator commands</li>
 <li>Controlling linear actuator A</li>
 <li>Reading the pressure sensor</li>
-<li>Checking assigned limit switches</li>
 <li>Updating the local status LED</li>
 <li>Sending feedback to the main Nano</li>
 </ul>
 <h3 id="driver-nano-3">Driver Nano 3</h3>
 <p>Kaushik's Nano is responsible for:</p>
 <ul>
-<li>Receiving actuator commands</li>
-<li>Controlling linear actuator B</li>
-<li>Reading the IMU</li>
-<li>Checking assigned limit switches</li>
-<li>Sending sensor feedback to the main Nano</li>
+<li>Receiving linear actuator B position commands from the main Nano over UART</li>
+<li>Controlling linear actuator B (DFRobot FIT0577 N20 lead-screw motor) through a DRV8833 motor driver</li>
+<li>Reading a slide potentiometer for the actuator's position (closed-loop control)</li>
+<li>Monitoring motor current for stall detection (0.61 A current limit)</li>
+<li>Reading the LIS3DH IMU (accelerometer) and computing jerk and impulse</li>
+<li>Sending IMU data and actuator status to the main Nano over UART</li>
 </ul>
+<p>Driver Nano 3 is powered by its own 9 V supply. Its only connection to the main Nano is the UART link (pins 1 and 2 of the ribbon cable) and a ground reference (pin 8). Full details are on <a href="https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/">Kaushik's datasheet</a>.</p>
 <hr>
 <h2 id="software-flow">Software Flow</h2>
 <p>The software will run continuously while the robotic leg is powered.</p>
@@ -1425,7 +1426,7 @@
 <li>Check whether the requested movement is allowed.</li>
 <li>Control the assigned motor or actuator.</li>
 <li>Read the connected sensors.</li>
-<li>Check the limit switches.</li>
+<li>Check the joint position against its allowed range.</li>
 <li>Send feedback to the main Nano.</li>
 <li>Repeat until the system is stopped.</li>
 </ol>
@@ -1463,7 +1464,7 @@
 <tr>
 <td>Limit warning</td>
 <td>Driver to main</td>
-<td>Reports a triggered limit switch</td>
+<td>Reports that a joint reached its position limit or stalled</td>
 </tr>
 <tr>
 <td>Motor status</td>
@@ -1517,7 +1518,7 @@
 <li>Joint or actuator position</li>
 <li>Pressure sensor readings</li>
 <li>IMU measurements</li>
-<li>Limit-switch status</li>
+<li>Position-limit and stall status</li>
 <li>Motor or actuator status</li>
 <li>Error messages</li>
 </ul>
@@ -1526,10 +1527,10 @@
 <h2 id="safety-and-error-handling">Safety and Error Handling</h2>
 <p>Safety is an important part of the software because the robotic leg contains moving joints and actuators.</p>
 <p>The software must prevent commands from moving the joints outside their allowed range.</p>
-<h3 id="limit-switches">Limit Switches</h3>
-<p>The current plan includes two limit switches for each of the three joints.</p>
-<p>The switches will help detect when a joint reaches its allowed movement limit.</p>
-<p>When a limit switch is activated, the software should stop movement farther into that limit.</p>
+<h3 id="joint-position-limits">Joint Position Limits</h3>
+<p>The leg does not use limit switches. Each driver Nano knows its joint's position from its own feedback (servo position or the linear actuator's position sensor), and the software keeps every joint inside its allowed range.</p>
+<p>Driver Nano 3's motor driver also limits motor current and detects a stall, so its joint is stopped before the motor overheats if it reaches a hard stop or jams.</p>
+<p>If a command would move a joint past its allowed range, the driver Nano rejects it and stops at the limit.</p>
 <h3 id="communication-loss">Communication Loss</h3>
 <p>If communication between the main Nano and a driver Nano is lost, the affected actuator should stop safely.</p>
 <p>The system should also report a communication fault.</p>
@@ -1545,8 +1546,12 @@
 </thead>
 <tbody>
 <tr>
-<td>Joint limit reached</td>
+<td>Joint position limit reached</td>
 <td>Stop movement farther into the limit</td>
+</tr>
+<tr>
+<td>Motor stall or over-current</td>
+<td>Stop the motor and report a fault</td>
 </tr>
 <tr>
 <td>Communication lost</td>
@@ -1607,8 +1612,8 @@
 <td>Nano receives orientation data</td>
 </tr>
 <tr>
-<td>Limit switches</td>
-<td>Movement stops at the assigned limits</td>
+<td>Position limits</td>
+<td>Movement stops at each joint's allowed range</td>
 </tr>
 <tr>
 <td>IR remote</td>
@@ -1656,7 +1661,7 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Back to top
