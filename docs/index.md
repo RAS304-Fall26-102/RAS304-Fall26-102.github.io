@@ -1,5 +1,4 @@
 
-
 # RAS 304 — Team 102
 
 **Robotic Spider Leg Project**
@@ -132,3 +131,4 @@ The purpose of this design review is to present the team's current design, expla
 ## Conclusion
 
 Team 102's current design provides a foundation for a modular robotic spider leg. The next stage of development focuses on completing the electrical and software designs, testing the individual controllers, and integrating the subsystems into one functioning leg.
+
