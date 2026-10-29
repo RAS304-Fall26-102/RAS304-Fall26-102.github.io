@@ -296,7 +296,7 @@ The current software and hardware proposal combines features from the different 
 | Communication | UART between Nanos |
 | Ground detection | Pressure sensor |
 | Orientation | IMU |
-| Joint protection | Two limit switches per joint |
+| Joint protection | Software position limits from each joint's position feedback, plus motor stall detection (no limit switches) |
 | User input | IR remote |
 | Status | RGB and local LEDs |
 

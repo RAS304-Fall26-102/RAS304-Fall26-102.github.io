@@ -30,8 +30,8 @@ The main Nano calculates where the leg should move. The driver Nanos receive com
 |---|---|---|
 | Main Nano | Preston | Kinematics, IR remote, RGB LED, communication |
 | Driver Nano 1 | Akshan | Servo motor and proposed display |
-| Driver Nano 2 | Bex | Linear actuator A, pressure sensor, limit switches, status LED |
-| Driver Nano 3 | Kaushik | Linear actuator B, IMU, limit switches, sensor feedback |
+| Driver Nano 2 | Bex | Linear actuator A, pressure sensor, status LED |
+| Driver Nano 3 | Kaushik | Linear actuator B with slide-pot position feedback and stall detection, LIS3DH IMU (jerk and impulse), UART feedback |
 
 ### Leg Control Block Diagram
 
@@ -43,7 +43,7 @@ The main Nano acts as the central controller. Each driver Nano is responsible fo
 
 The final motor drivers, wiring, and display are still being selected.
 
-**Note:** UART is the current communication plan. Any older I2C/Serial labels in the diagram will need to be updated.
+**Note:** All communication between the Nanos uses UART. Any older I2C/Serial labels in the diagram will need to be updated. Each Nano has its own power supply; the ribbon cables carry only UART and a ground reference.
 
 ### Main Nano
 
@@ -73,7 +73,6 @@ Bex's Nano is responsible for:
 - Receiving actuator commands
 - Controlling linear actuator A
 - Reading the pressure sensor
-- Checking assigned limit switches
 - Updating the local status LED
 - Sending feedback to the main Nano
 
@@ -81,11 +80,14 @@ Bex's Nano is responsible for:
 
 Kaushik's Nano is responsible for:
 
-- Receiving actuator commands
-- Controlling linear actuator B
-- Reading the IMU
-- Checking assigned limit switches
-- Sending sensor feedback to the main Nano
+- Receiving linear actuator B position commands from the main Nano over UART
+- Controlling linear actuator B (DFRobot FIT0577 N20 lead-screw motor) through a DRV8833 motor driver
+- Reading a slide potentiometer for the actuator's position (closed-loop control)
+- Monitoring motor current for stall detection (0.61 A current limit)
+- Reading the LIS3DH IMU (accelerometer) and computing jerk and impulse
+- Sending IMU data and actuator status to the main Nano over UART
+
+Driver Nano 3 is powered by its own 9 V supply. Its only connection to the main Nano is the UART link (pins 1 and 2 of the ribbon cable) and a ground reference (pin 8). Full details are on [Kaushik's datasheet](https://kaushikgunasekaren.github.io/kgunase7_RAS304_F26/).
 
 ---
 
@@ -121,7 +123,7 @@ The main controller calculates movement and sends commands. The driver controlle
 3. Check whether the requested movement is allowed.
 4. Control the assigned motor or actuator.
 5. Read the connected sensors.
-6. Check the limit switches.
+6. Check the joint position against its allowed range.
 7. Send feedback to the main Nano.
 8. Repeat until the system is stopped.
 
@@ -144,7 +146,7 @@ The exact communication channels, pin assignments, and message format have not b
 | Position command | Main to driver | Requests movement |
 | Speed command | Main to driver | Changes actuator or motor speed |
 | Sensor feedback | Driver to main | Reports sensor readings |
-| Limit warning | Driver to main | Reports a triggered limit switch |
+| Limit warning | Driver to main | Reports that a joint reached its position limit or stalled |
 | Motor status | Driver to main | Reports motor operation |
 | Fault message | Either direction | Reports a problem |
 | Stop command | Main to driver | Requests a safe stop |
@@ -169,7 +171,7 @@ Planned feedback includes:
 - Joint or actuator position
 - Pressure sensor readings
 - IMU measurements
-- Limit-switch status
+- Position-limit and stall status
 - Motor or actuator status
 - Error messages
 
@@ -183,13 +185,13 @@ Safety is an important part of the software because the robotic leg contains mov
 
 The software must prevent commands from moving the joints outside their allowed range.
 
-### Limit Switches
+### Joint Position Limits
 
-The current plan includes two limit switches for each of the three joints.
+The leg does not use limit switches. Each driver Nano knows its joint's position from its own feedback (servo position or the linear actuator's position sensor), and the software keeps every joint inside its allowed range.
 
-The switches will help detect when a joint reaches its allowed movement limit.
+Driver Nano 3's motor driver also limits motor current and detects a stall, so its joint is stopped before the motor overheats if it reaches a hard stop or jams.
 
-When a limit switch is activated, the software should stop movement farther into that limit.
+If a command would move a joint past its allowed range, the driver Nano rejects it and stops at the limit.
 
 ### Communication Loss
 
@@ -205,7 +207,8 @@ The software should reject movement commands that are outside the allowed operat
 
 | Condition | Proposed Response |
 |---|---|
-| Joint limit reached | Stop movement farther into the limit |
+| Joint position limit reached | Stop movement farther into the limit |
+| Motor stall or over-current | Stop the motor and report a fault |
 | Communication lost | Stop the affected actuator |
 | Invalid movement command | Reject the command |
 | Sensor error | Report a fault |
@@ -228,7 +231,7 @@ The team will test the individual controllers before combining them into the com
 | Linear actuator B | Actuator responds to movement commands |
 | Pressure sensor | Nano receives pressure readings |
 | IMU | Nano receives orientation data |
-| Limit switches | Movement stops at the assigned limits |
+| Position limits | Movement stops at each joint's allowed range |
 | IR remote | Main Nano recognizes user commands |
 | RGB LED | LED displays the assigned system status |
 | Communication failure | Actuators stop safely |
